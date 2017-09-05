@@ -8,13 +8,9 @@ router.get('/', function (req, res, next) {
         copyright: '| © 2017 theBRATcrew LLC | All Right Reserved ' + new Date().getFullYear()
     });
 });
-// router.get('/about', function (req, res, next)
+// router.get('/cart', function (req, res, next)
 // {
-// 	res.render('about', {});
-// });
-// router.get('/contact', function (req, res, next)
-// {
-// 	res.render('contact', {});
+// 	res.render('cart', {});
 // });
 
 module.exports = router;
