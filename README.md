@@ -1,3 +1,3 @@
-# TheBratCrew
+# theBRATcrew
 
-test
+NodeJS Web Application running on AWS Elastic BeanStalk
