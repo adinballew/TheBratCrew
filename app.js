@@ -4,6 +4,44 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var sql = require('mssql');
+
+var config = {
+    server  :   process.env.RDS_HOSTNAME,
+    database:   process.env.RDS_DB_NAME,
+    user    :   process.env.RDS_USERNAME,
+    password:   process.env.RDS_PASSWORD,
+    port    :   process.env.RDS_PORT
+};
+
+function getData()
+{
+    var dbConn = new sql.ConnectionPool(config);
+    dbConn.connect()
+        .then(function ()
+        {
+            var request = new sql.Request(dbConn);
+            //7.
+            request.query("select * from Usernames")
+                .then(function (recordSet)
+                {
+                    console.log(recordSet);
+                    return recordSet;
+                    dbConn.close();
+                })
+                .catch(function (err)
+                {
+                    console.log(err);
+                    dbConn.close();
+                });
+        })
+        .catch(function (err)
+        {
+            console.log(err);
+        });
+}
+
+getData();
 
 var index = require('./routes/index');
 var users = require('./routes/users');
