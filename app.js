@@ -4,45 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var sql = require('mssql');
 
-var config = {
-    server  :   process.env.RDS_HOSTNAME,
-    database:   process.env.RDS_DB_NAME,
-    user    :   process.env.RDS_USERNAME,
-    password:   process.env.RDS_PASSWORD,
-    port    :   process.env.RDS_PORT
-};
-
-function getData()
-{
-    var dbConn = new sql.ConnectionPool(config);
-    dbConn.connect()
-        .then(function ()
-        {
-            var request = new sql.Request(dbConn);
-            //7.
-            request.query("select * from Usernames")
-                .then(function (recordSet)
-                {
-                    console.log(recordSet);
-                    return recordSet;
-                    dbConn.close();
-                })
-                .catch(function (err)
-                {
-                    console.log(err);
-                    dbConn.close();
-                });
-        })
-        .catch(function (err)
-        {
-            console.log(err);
-        });
-}
-
-getData();
-
+// Require route handlers and use the same connection pool
 var index = require('./routes/index');
 var users = require('./routes/users');
 
@@ -50,13 +13,13 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'pug');
 
-// uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -64,14 +27,14 @@ app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
