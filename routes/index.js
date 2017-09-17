@@ -6,9 +6,9 @@ function getFlavorData(callback)
 {
 	"use strict";
 	var sql = require('mssql');
-	var request = new sql.Request(dbConn);
+	var request = new sql.Request(dbConn); // Maybe check to see if db is still open?
 
-	request.query('select * from JuiceFlavors', function (err, result)
+	request.query('select * from JuiceFlavors order by name asc', function (err, result)
 	{
 		if (err)
 		{
