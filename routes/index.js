@@ -1,29 +1,35 @@
 var express = require('express');
-var sql = require('mssql');
 var dbConn = require('../database.js');
-var router = express.Router();
+var router = new express.Router();
+
+function getFlavorData(callback)
+{
+	"use strict";
+	var sql = require('mssql');
+	var request = new sql.Request(dbConn);
+
+	request.query('select * from JuiceFlavors', function (err, result)
+	{
+		if (err)
+		{
+			console.error(err);
+			return;
+		}
+		console.log(result.recordset);
+		callback(result);
+	});
+}
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-
-    var result = '';
-    var request = new sql.Request(dbConn);
-    request.query('select flavors from JuiceFlavors', function (err, recordset) {
-        if (err) {
-            console.error(err);
-            res.status(500).send(err.message);
-            return;
-        }
-        result = recordset['recordset'];
-        console.log(result);
-    });
-
-    res.render('index', {
-        title: 'theBRATcrew',
-        copyright: '| © 2017 theBRATcrew LLC | All Right Reserved ' + new Date().getFullYear(),
-    });
-
+router.get('/', function (req, res, next)
+{
+	"use strict";
+	getFlavorData(function (result)
+	{
+		res.render('index', {title: 'theBRATcrew', flavors: result.recordset});
+	});
 });
+
 // router.get('/cart', function (req, res, next)
 // {
 // 	res.render('cart', {});
