@@ -27,32 +27,32 @@ block content
 	// END HOME SECTION
 	// ABOUT SECTION
 	#about-sec
-		.about-container
-			h1.g-pad-bottom
-				i.fa.fa-crosshairs
-				|             About Us
-			center
-				h2
-					img(src='assets/img/logo.png')
-				h4
-					| The BRAT (Berka Retail And Tech) name has been around since 2004. The brand is a well known brand, and
-					| becomes so quickly in each and every market expanded into. BRAT is one of
-					| the unique companies that does everything by the book except when it comes to our customers. We feel our
-					| customers deserve more, and should receive better treatment than most
-					| companies give them. We will constantly be expanding into new markets and new states.
-				br
-				br
-				h4
-					p
-						| theBRATcrew, LLC is owned and operated by Richard & Jackie Berka. No products are sold on this site.
-						| To make an order from this company you must contact them in person for
-						| age verification purposes. B-Line PC Repair Services is owned & operated by Adin Ballew who operates
-						| out of the BRAT Vapor Lounge location: 304
-						| N. Muskogee Avenue Tahlequah Oklahoma 74464
-						br
-						|  (918) 772-5101
-		.container
-	// ABOUT SECTION
+			.about-container
+				h1.g-pad-bottom
+					i.fa.fa-crosshairs
+					|             About Us
+				center
+					h2
+						img(src='assets/img/logo.png')
+					h4
+						| The BRAT (Berka Retail And Tech) name has been around since 2004. The brand is a well known brand, and
+						| becomes so quickly in each and every market expanded into. BRAT is one of
+						| the unique companies that does everything by the book except when it comes to our customers. We feel our
+						| customers deserve more, and should receive better treatment than most
+						| companies give them. We will constantly be expanding into new markets and new states.
+					br
+					br
+					h4
+						p
+							| theBRATcrew, LLC is owned and operated by Richard & Jackie Berka. No products are sold on this site.
+							| To make an order from this company you must contact them in person for
+							| age verification purposes. B-Line PC Repair Services is owned & operated by Adin Ballew who operates
+							| out of the BRAT Vapor Lounge location: 304
+							| N. Muskogee Avenue Tahlequah Oklahoma 74464
+							br
+							|  (918) 772-5101
+			.container
+	// END ABOUT SECTION
 	// SERVICES SECTION
 	section#services-sec
 		.container
@@ -108,6 +108,7 @@ block content
 									| clean-up / speed-ups, network issues, spyware / malware,
 									| virus removal, software, hardware, upgrades and more.
 	// END SERVICES SECTION
+	// CALENDAR SECTION
 	#calendar-sec
 		.calendar-container
 			center
@@ -130,6 +131,7 @@ block content
 					br
 					br
 					|                 December 20th: drawing for BRAT Christmas gift giveaway.
+	// END CALENDAR SECTION
 	// PRICE SECTION
 	section#price-sec
 		.container
@@ -205,9 +207,10 @@ block content
 				|             order for pickup.
 		center
 			h5
-				each flavor in flavors
-					p #{flavor.name}
-
+				each item in recordset
+					p #{item.name}
+					if(item.description !== null)
+						p #{item.description}
 	// JUICE MENU SECTION
 	// PORTFOLIO SECTION
 	section#port-sec

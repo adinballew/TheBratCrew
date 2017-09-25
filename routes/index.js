@@ -1,32 +1,46 @@
 var express = require('express');
-var dbConn = require('../database.js');
 var router = new express.Router();
+var config = require("../dbconfig.js").config;
+var msSqlConnector = require("../msSqlConnector.js");
 
-function getFlavorData(callback)
+
+function queryAll(callback)
 {
-	"use strict";
-	var sql = require('mssql');
-	var request = new sql.Request(dbConn); // Maybe check to see if db is still open?
-
-	request.query('select * from JuiceFlavors order by name asc', function (err, result)
+	var con = new msSqlConnector.msSqlConnector(config);
+	con.connect().then(function ()
 	{
-		if (err)
-		{
-			console.error(err);
-			return;
-		}
-		console.log(result.recordset);
-		callback(result);
+		new con.Request("select * from JuiceFlavors")
+			.onComplete(function (count, data)
+			{
+				if (callback)
+				{
+					console.log(data);
+					callback(data);
+				}
+			})
+			.onError(function (err)
+			{
+				console.log(err);
+			}).Run();
+	}).catch(function (ex)
+	{
+		console.log(ex);
 	});
 }
 
 /* GET home page. */
+/**
+ * @class recordset
+ * @property id
+ * @property name
+ * @property description
+ */
 router.get('/', function (req, res, next)
 {
 	"use strict";
-	getFlavorData(function (result)
+	queryAll(function (data)
 	{
-		res.render('index', {title: 'theBRATcrew', flavors: result.recordset});
+		res.render('index', {title: 'theBRATcrew', recordset: data});
 	});
 });
 
