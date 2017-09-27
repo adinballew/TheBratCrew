@@ -4,10 +4,24 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var db = require('./db');
 
 // Require route handlers and use the same connection pool
 var index = require('./routes/index');
 var users = require('./routes/users');
+
+// Database test
+db.any('SELECT * FROM flavors')
+	.then(function (data)
+	{
+		"use strict";
+		console.log(data);
+	})
+	.catch(function (error)
+	{
+		"use strict";
+		console.log(error);
+	});
 
 var app = express();
 

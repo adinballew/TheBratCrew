@@ -1,20 +1,22 @@
 {
-  "name": "thebratcrew",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "aws-sdk": "2.117.0",
-    "bluebird": "3.5.0",
-    "body-parser": "1.18.1",
-    "cookie-parser": "1.4.3",
-    "debug": "3.0.1",
-    "express": "4.15.4",
-    "morgan": "1.8.2",
-    "pug": "2.0.0-rc.4",
-    "serve-favicon": "2.4.4",
-    "tedious": "^2.0.1"
-  }
+	"name": "thebratcrew",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "node ./bin/www",
+		"clean": "rm -rf node_modules",
+		"reinstall": "npm run clean && npm install"
+	},
+	"dependencies": {
+		"bluebird": "^3.5.0",
+		"body-parser": "1.18.1",
+		"cookie-parser": "1.4.3",
+		"debug": "3.0.1",
+		"express": "4.15.4",
+		"morgan": "1.8.2",
+		"pg-promise": "^6.9.0",
+		"pug": "2.0.0-rc.4",
+		"sequelize": "^4.11.1",
+		"serve-favicon": "2.4.4"
+	}
 }
