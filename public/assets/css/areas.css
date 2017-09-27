@@ -1,0 +1,57 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+/*---areas---*/
+.left-box,
+.middle-box,
+.right-box
+{
+    width: auto !important;
+    height: auto !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.left-box text,
+.middle-box text,
+.right-box text 
+{
+    width: auto !important;
+    height: auto !important;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+}
+
+.header-logo 
+{
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.cart 
+{
+    width: auto !important;
+    height: auto !important;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cart items,
+.cart amount,
+.cart facons
+{
+    width: auto !important;
+    height: auto !important;
+    padding: 10px;
+}

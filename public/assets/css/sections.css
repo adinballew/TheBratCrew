@@ -1,0 +1,75 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+/*---sections---*/
+
+
+/*---rows---*/
+#row
+{
+    height: auto !important; 
+}
+
+.row-flex-center
+{
+    height: auto !important;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.row-flex-spaced
+{
+    height: auto !important;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+/*---columns---*/
+#column
+{
+    height: auto !important; 
+}
+
+#column-middle
+{
+    height: auto !important; 
+}
+
+.column-flex-center
+{
+    height: auto !important;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.column-flex-spaced
+{
+    height: auto !important;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+
+
+
+
+
+

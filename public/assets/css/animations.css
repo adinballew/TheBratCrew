@@ -1,0 +1,16 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+/*---animation for slider (general)---*/
+@keyframes slider 
+{
+0% {left: 0%;}
+30% {left: 0%;}
+33% {left: -100%;}
+63% {left: -100%;}
+66% {left: -200%;}
+97% {left: -200%;}
+100% {left: -300%;}
+}

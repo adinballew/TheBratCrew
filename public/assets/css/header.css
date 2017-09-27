@@ -1,0 +1,178 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+/*---mobile header---*/
+#mobile_header
+{
+width: 100% !important; 
+min-height: 60px;
+display: flex; 
+display: -webkit-flex; 
+flex-wrap: wrap; 
+-webkit-flex-wrap: wrap; 
+justify-content: center;
+-webkit-justify-content: center;
+}
+#mobile_header container 
+{
+width: 90% !important;
+min-height: 60px;
+display: flex; 
+display: -webkit-flex; 
+flex-wrap: wrap; 
+-webkit-flex-wrap: wrap; 
+justify-content: center;
+-webkit-justify-content: center;
+}
+#mobile_header container logo 
+{
+width: auto !important; 
+min-height: 30px;
+margin-top: 15px;
+margin-bottom: 15px;
+color: white; 
+line-height: 30px;
+}
+#mobile_header container cart
+{
+width: auto !important; 
+min-height: 30px;
+margin-top: 15px;
+margin-bottom: 15px;
+color: white; 
+line-height: 30px;
+}
+#mobile_header container cart items 
+{
+width: auto; 
+min-height: 30px;
+line-height: 30px;
+margin-right: 10px;
+}
+#mobile_header container cart amount 
+{
+width: auto; 
+min-height: 30px;
+line-height: 30px;
+margin-left: 10px;
+margin-right: 10px;
+}
+#mobile_header container cart fa 
+{
+color: black; 
+padding-left: 5px;
+padding-right: 5px;
+transition: all 0.5s;
+-webkit-transition: all 0.5s;
+}
+#mobile_header container fa:hover 
+{
+color: red;
+}
+#mobile_header a 
+{
+padding-left: 5px;
+padding-right: 5px;
+margin-left: 5px;
+margin-right: 5px;
+color: white; 
+line-height: 30px;
+text-decoration: none;
+}
+#mobile_header a:hover 
+{
+color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---top bar---*/
+#header
+{
+width: 100% !important; 
+min-height: 60px;
+display: flex; 
+display: -webkit-flex; 
+flex-wrap: wrap; 
+-webkit-flex-wrap: wrap; 
+justify-content: center;
+-webkit-justify-content: center;
+}
+#header container 
+{
+width: 90% !important; 
+min-height: 60px;
+position: relative;
+}
+#header container logo 
+{
+width: auto !important; 
+min-height: 30px; 
+margin-top: 15px;
+position: relative; 
+float: left;
+color: white; 
+line-height: 30px;
+}
+#header container cart
+{
+width: auto !important; 
+min-height: 30px; 
+margin-top: 80px;
+position: relative; 
+float: right;
+color: white; 
+line-height: 30px;
+margin-right: 5px;
+}
+#header container cart items 
+{
+width: auto; 
+min-height: 30px;
+line-height: 30px;
+margin-right: 10px;
+}
+#header container cart amount 
+{
+width: auto; 
+min-height: 30px;
+line-height: 30px;
+margin-left: 10px;
+margin-right: 10px;
+}
+#header container cart fa 
+{
+color: white; 
+padding-left: 5px;
+padding-right: 5px;
+transition: all 0.5s;
+-webkit-transition: all 0.5s;
+}
+#header container fa:hover 
+{
+color: red;
+}
+#header a 
+{
+padding-left: 5px;
+padding-right: 5px;
+margin-left: 5px;
+margin-right: 5px;
+color: white; 
+line-height: 30px;
+text-decoration: none;
+}
+#header a:hover 
+{
+color: red;   
+}

@@ -1,0 +1,39 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+
+#mtb
+{
+width: 100% !important; 
+min-height: 60px;
+background: url(../img/bgs/20.jpg) no-repeat center center;
+background-size: 100%;
+display: flex; 
+display: -webkit-flex; 
+flex-wrap: wrap; 
+-webkit-flex-wrap: wrap; 
+justify-content: center;
+-webkit-justify-content: center;
+}
+
+#tb
+{
+width: 100% !important; 
+min-height: 60px;
+background: url(../img/bgs/20.jpg) no-repeat center center;
+background-size: 100%;
+display: flex; 
+display: -webkit-flex; 
+flex-wrap: wrap; 
+-webkit-flex-wrap: wrap; 
+justify-content: center;
+-webkit-justify-content: center;
+}
+
+
+
+
+
+

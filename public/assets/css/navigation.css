@@ -1,0 +1,19 @@
+/*----This is the professional design build of the first BRAT template----*/
+/*----September 18, 2017 theBRATcrew LLC----*/
+/*----Integration design by Adin Ballew----*/
+
+
+a
+{
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+a:hover 
+{
+    color: red;
+}
