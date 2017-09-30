@@ -1,11 +1,28 @@
-var promise = require('bluebird');
-var config = require('./dbconfig').config;
+const promise = require('bluebird');
+const config = require('./dbconfig').config;
 
-var initOptions = {
+const options = {
 	promiseLib: promise
 };
 
-var pgp = require('pg-promise')(initOptions);
-var db = pgp(config);
+const pgp = require('pg-promise')(options);
+const db = pgp(config);
 
-module.exports = db;
+function getAllFlavors(result)
+{
+	"use strict";
+	db.any('select * from flavors')
+		.then(function (result)
+		{
+			console.log(result);
+		})
+		.catch(function (err)
+		{
+			console.log(err);
+		});
+	return result;
+}
+
+module.exports = {
+	getAllFlavors: getAllFlavors
+};

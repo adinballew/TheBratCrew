@@ -1,16 +1,115 @@
+
+
+
+
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
 
 
-/*---animation for slider (general)---*/
-@keyframes slider 
+
+.switcher
 {
-0% {left: 0%;}
-30% {left: 0%;}
-33% {left: -100%;}
-63% {left: -100%;}
-66% {left: -200%;}
-97% {left: -200%;}
-100% {left: -300%;}
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+@keyframes slider
+{
+    0%
+    {
+        left: 0%;
+    }
+    30% 
+    {
+        left: 0%;
+    }
+    33% 
+    {
+        left: -100%;
+    } 
+    63% 
+    {
+        left: -100%;
+    }
+    66% 
+    {
+        left: -200%;
+    }
+    97% 
+    {
+        left: -200%; 
+    } 
+    100% 
+    {
+        left: -300%;
+    }
+}
+
+@keyframes banner 
+{
+    0%
+    {
+        left: 0%;
+        opacity: 1;
+    }
+    30% 
+    {
+        left: 0%;
+        opacity: 1;
+    }
+    31% 
+    {
+        left: 0%;
+        opacity: 0;
+    }
+    32% 
+    {
+        left: -100%;
+        opacity: 0;
+    }
+    33% 
+    {
+        left: -100%;
+        opacity: 1;
+    } 
+    63% 
+    {
+        left: -100%;
+        opacity: 1;
+    }
+    64% 
+    {
+        left: -100%;
+        opacity: 0;
+    }
+    65% 
+    {
+        left: -200%;
+        opacity: 0;
+    }
+    66% 
+    {
+        left: -200%;
+        opacity: 1;
+    }
+    97% 
+    {
+        left: -200%; 
+        opacity: 1;
+    } 
+    98% 
+    {
+        left: -200%;
+        opacity: 0;
+    }
+    99% 
+    {
+        left: -300%;
+        opacity: 0;
+    }
+    100% 
+    {
+        left: -300%;
+    }
 }

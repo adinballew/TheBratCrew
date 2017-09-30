@@ -1,66 +1,259 @@
+
+
+
+
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
 
-/*---small sizes---*/
 @media screen and (min-width: 300px) and (max-width: 899px)
 {
-/*---spans---*/
-.span25 {width: calc(100% - 4.5px);}
-.span33 {width: calc(100% - 4.5px);}
-.span50 {width: calc(100% - 4.5px);}
-.span75 {width: calc(100% - 4.5px);}
-.span90 {width: 90% !important;}
-.span100 {width: 100% !important;}
-#row {display: flex; display: -webkit-flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; justify-content: center; -webkit-justify-content: center;}
-#column {display: flex; display: -webkit-flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; justify-content: center; -webkit-justify-content: center;}
-.row {display: flex; display: -webkit-flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; justify-content: center; -webkit-justify-content: center;}
-.left-box,
-.right-box {display: flex; display: -webkit-flex; flex-wrap: wrap; -webkit-flex-wrap: wrap; justify-content: center; -webkit-justify-content: center;}
-#column-middle {display: none;}
+    #wrapper
+    {
+        width: 100% !important;
+    }
+    .top,
+    .topL,
+    .topR,
+    .header,
+    .scart,
+    .navmen,
+    .titleRow,
+    .productRow,
+    .sideNslide,
+    .adBanner,
+    #about,
+    #contact,
+    .info,
+    .map,
+    .footer,
+    .footerRow
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+    .topL,
+    .topR
+    {
+        min-width: 100%;
+    }
+    .side 
+    {
+        display: none;
+    }
+    .slide 
+    {
+        min-width: 99% !important;
+    }
+    .tsBox1,
+    .tsBox2,
+    .tsBox3,
+    .tsBox4,
+    .flBox1,
+    .flBox2,
+    .flBox3,
+    .flBox4,
+    .bajabrat,
+    .bananasicle,
+    .bananabratpie,
+    .bratberry,
+    .bratberryblast,
+    .bratberrydelight,
+    .bratstasis,
+    .bratbluehero,
+    .bratbonkers,
+    .bratdragon,
+    .bratgreenhero,
+    .bratredhero,
+    .brattastic,
+    .bratyellowhero,
+    .sourbrat,
+    .tropicalbrat
+    {
+        width: 100%;
+        min-height: 30px;
+        border: 1px solid white;
+        position: relative;
+        float: left;
+    }
+
+    .tsBox1,
+    .tsBox2,
+    .tsBox3,
+    .txBox4,
+    .flBox1,
+    .flBox2,
+    .flBox3,
+    .flBox4,
+    .bajabrat,
+    .bananasicle,
+    .bananabratpie,
+    .bratberry,
+    .bratberryblast,
+    .bratberrydelight,
+    .bratstasis,
+    .bratbluehero,
+    .bratbonkers,
+    .bratdragon,
+    .bratgreenhero,
+    .bratredhero,
+    .brattastic,
+    .bratyellowhero,
+    .sourbrat,
+    .tropicalbrat
+    {
+        margin: 5px 0px 5px 0px;
+    }
+    .titleRow
+    {
+        width: 94% !important;
+    }
 }
 
 
 
 
-
-
-
-/*---larger sizes---*/
-@media screen and (min-width: 900px) and (max-width: 1199px)
+@media screen and (min-width: 900px) 
 {
-/*---spans---*/
-.span25 {width: calc(25% - 4.5px);}
-.span33 {width: 33.3333333333333% !important;}
-.span50 {width: calc(50% - 4.5px);}
-.span75 {width: calc(75% - 4.5px);}
-.span90 {width: 90% !important;}
-.span100 {width: 100% !important;}
-#row {display: block;}
-#column {position: relative; float: left;}
-.left-box {position: relative; float: left;}
-.right-box {position: relative; float: right;}
-#column-middle {display: none;}
+    #wrapper
+    {
+        width: 90% !important;
+    }
+    .top,
+    .topL,
+    .topR,
+    .titleRow,
+    .productRow,
+    .adBanner,
+    #about,
+    #contact,
+    .info,
+    .map,
+    .footer,
+    .footerRow
+    {
+        display: block;
+    }
+    .topL,
+    .topR,
+    .nav
+    {
+        min-width: 30px;
+    }
+    .header
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+    }
+    .navmen,
+    .scart
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+    .sideNslide
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+    .side 
+    {
+        min-width: calc(25% - 12px) !important;
+        max-width: calc(25% - 12px) !important;
+    }
+    .slide
+    {
+        min-width: calc(75% - 2px) !important;
+        max-width: calc(25% - 12px) !important;
+    }
+    .titleRow 
+    {
+        width: 96.5% !important;
+    }
 }
-
-
-
 
 
 
 
 @media screen and (min-width: 1200px)
 {
-    /*---spans---*/
-.span25 {width: calc(25% - 4.5px);}
-.span33 {width: 33.3333333333333% !important;}
-.span50 {width: calc(50% - 4.5px);}
-.span75 {width: calc(75% - 4.5px);}
-.span90 {width: 90% !important;}
-.span100 {width: 100% !important;}
-#row {display: block;}
-#column {position: relative; float: left;}
-#column-middle {position: relative; float: left;}
-.left-box {position: relative; float: left;}
-.right-box {position: relative; float: right;}
+    #wrapper
+    {
+        width: 75% !important;
+    }
+    .top,
+    .topL,
+    .topR,
+    .titleRow,
+    .productRow,
+    .adBanner,
+    #about,
+    #contact,
+    .info,
+    .map,
+    .footer,
+    .footerRow
+    {
+        display: block;
+    }
+    .topL,
+    .topR,
+    .nav
+    {
+        min-width: 30px;
+    }
+    .header
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+    }
+    .navmen,
+    .scart
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+    .sideNslide
+    {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+    .side 
+    {
+        min-width: calc(18% - 12px) !important;
+        max-width: calc(18% - 12px) !important;
+    }
+    .slide
+    {
+        min-width: calc(82% - 2px) !important;
+        max-width: calc(82% - 2px) !important;
+    }
+    .titleRow 
+    {
+        width: 97.5% !important;
+    }
 }

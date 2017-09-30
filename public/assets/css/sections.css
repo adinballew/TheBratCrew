@@ -1,20 +1,34 @@
+
+
+
+
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
 
 
-/*---sections---*/
-
-
-/*---rows---*/
-#row
+body
 {
-    height: auto !important; 
+    width: 100%;
+    background: url(../img/bgs/10.jpg) no-repeat center center;  
+    background-size: cover;  
+    background-attachment: fixed;
+    color: white;  
+    font-size: 20px;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;  
+    display: -webkit-flex; 
+    flex-wrap: wrap;  
+    -webkit-flex-wrap: wrap; 
+    justify-content: center;  
+    -webkit-justify-content: center;
 }
 
-.row-flex-center
+#wrapper 
 {
-    height: auto !important;
+    min-height: 30px;
+    height: auto;
+    border: 1px solid transparent;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -23,31 +37,448 @@
     -webkit-justify-content: center;
 }
 
-.row-flex-spaced
+/*----------------------------------------------------------------------------------------------------------------------*/
+.box
 {
-    height: auto !important;
+    width: 99%;
+    min-height: 30px;
+    height: auto;
+    border: 1px solid transparent;
+    margin: 5px 0px 5px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.top,
+.header,
+.scart,
+.navmen,
+.productRow,
+.sideNslide,
+.adBanner,
+#about,
+#contact,
+.info,
+.map,
+.footer,
+.footerRow
+{
+    width: 99%;
+    min-height: 30px;
+    height: auto;
+    margin: 5px auto 5px auto;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.productRow2
+{
+    width: 100%;
+    min-height: 30px;
+    height: auto;
+    margin: 5px auto 5px auto;
+    left: 0;
+    right: 0;
+    padding-left: 4px;
+}
+
+textBox,
+itemsBox,
+amountBox
+{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    position: relative;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navmen
+{
+    background: url(../img/bgs/20.jpg) no-repeat center center;
+    background-size: 100%;
+    line-height: 30px;
+}
+
+.topL
+{
+    min-width: 30px;
+    max-width: 400px;
+    min-height: 30px;
+    height: auto;
+    border: 1px solid transparent;
+    margin: 5px;
+    position: relative;
+    float: left;
+}
+
+.topR
+{
+    min-width: 30px;
+    max-width: 300px;
+    min-height: 30px;
+    height: auto;
+    border: 1px solid transparent;
+    margin: 5px;
+    position: relative;
+    float: right;
+}
+
+.logoH
+{
+    width: 180px;
+    height: 180px;
+    position: relative;
+    border: 1px solid transparent;
+    margin: 5px;
+}
+
+.logoF
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid transparent;
+    margin: 5px auto 5px auto;
+    left: 0;
+    right: 0;
+}
+
+.searchBox
+{
+    width: 250px;
+    min-height: 30px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border: 1px solid #fff;
+    margin: 5px;
+}
+
+.inputSection
+{
+    width: 200px;
+    min-height: 20px;
+    position: relative;
+    top: 0;
+    float: left;
+    display: block;
+}
+
+.submitSection
+{
+    width: 50px;
+    min-height: 30px;
+    position: relative;
+    float: right;
+    background: black;
+    display: block;
+}
+.submitSection:hover
+{
+    background: gray;
+    color: red;
+}
+
+.side 
+{
+    min-height: 30px;
+    position: relative;
+    float: left;
+    margin: 5px 10px 5px 0px;
+    overflow: hidden;
+    background: linear-gradient(gray,gray,silver,gray,gray);
+    background: -webkit-linear-gradient(gray,gray,silver,gray,gray);
+}
+
+.headingRow 
+{
+    width: calc(100% - 2px);
+    min-height: 40px;
+    line-height: 40px;
+    margin: 5px 0px 5px 0px;
+    position: relative;
+    float: left;
+    display: block;
+    font-size: 30px;
+    text-shadow: black 2px 2px 2px;
+    padding-left: 20px;
+    background: url(../img/bgs/20.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
+.titleRow
+{
+    height: auto;
+    margin: 5px auto 5px auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    min-height: 40px;
+    font-size: 30px;
+    text-shadow: black 2px 2px 2px;
+    padding-left: 20px;
+    background: url(../img/bgs/20.jpg) no-repeat center center;
+    background-size: 100%;
+    line-height: 40px;
+}
+
+.slide 
+{
+    min-height: 30px;
+    border: 1px solid transparent;
+    position: relative;
+    float: left;
+    margin: 5px 0px 5px 0px;
+    overflow: hidden;
+    background: url(../img/bgs/15.gif) no-repeat center center;
+    background-size: 100%;
+}
+
+.slide figure 
+{
+    width: 400%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    animation: 30s slider infinite;
+}
+
+.slide figure img 
+{
+    width: 25%;
+    float: left;
+}
+
+.tsBox1,
+.tsBox2,
+.tsBox3,
+.tsBox4,
+.flBox1,
+.flBox2,
+.flBox3,
+.flBox4,
+.bajabrat,
+.bananasicle,
+.bananabratpie,
+.bratberry,
+.bratberryblast,
+.bratberrydelight,
+.bratstasis,
+.bratbluehero,
+.bratbonkers,
+.bratdragon,
+.bratgreenhero,
+.bratredhero,
+.brattastic,
+.bratyellowhero,
+.sourbrat,
+.tropicalbrat
+{
+    width: calc(25% - 9.5px);
+    min-height: 30px;
+    border: 1px solid transparent;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.tsBox1,
+.tsBox2,
+.tsBox3,
+.flBox1,
+.flBox2,
+.flBox3
+{
+    margin: 5px 3.5px 5px 3.5px;
+}
+
+.bajabrat,
+.bananasicle,
+.bananabratpie,
+.bratberryblast,
+.bratberrydelight,
+.bratstasis,
+.bratbonkers,
+.bratdragon,
+.bratgreenhero,
+.brattastic,
+.bratyellowhero,
+.sourbrat
+{
+    margin: 5px 3.5px 5px 3.5px;
+}
+
+.tsBox4,
+.flBox4,
+.bratberry,
+.bratbluehero,
+.bratredhero,
+.tropicalbrat
+{
+    margin: 5px 3.5px 5px 3.5px;
+}
+
+.tsBox1,
+.tsBox2,
+.tsBox3,
+.tsBox4,
+.bajabrat,
+.bananasicle,
+.bananabratpie,
+.bratberry,
+.bratberryblast,
+.bratberrydelight,
+.bratstasis,
+.bratbluehero,
+.bratbonkers,
+.bratdragon,
+.bratgreenhero,
+.bratredhero,
+.brattastic,
+.bratyellowhero,
+.sourbrat,
+.tropicalbrat 
+{
+    background: linear-gradient(gray,gray,silver,gray,gray);
+    background: -webkit-linear-gradient(gray,gray,silver,gray,gray);
+}
+
+.tsBox1img,
+.tsBox2img,
+.tsBox3img,
+.tsBox4img,
+.tsBox1name,
+.tsBox2name,
+.tsBox3name,
+.tsBox4name,
+.tsBox1btn,
+.tsBox2btn,
+.tsBox3btn,
+.tsBox4btn,
+.bajabratimg,
+.bananasicleimg,
+.bananabratpieimg,
+.bratberryimg,
+.bratberryblastimg,
+.bratberrydelightimg,
+.bratstasisimg,
+.bratblueheroimg,
+.bratbonkersimg,
+.bratdragonimg,
+.bratgreenheroimg,
+.bratredheroimg,
+.brattasticimg,
+.bratyellowheroimg,
+.sourbratimg,
+.tropicalbratimg,
+.bajabratname,
+.bananasiclename,
+.bananabratpiename,
+.bratberryname,
+.bratberryblastname,
+.bratberrydelightname,
+.bratstasisname,
+.bratblueheroname,
+.bratbonkersname,
+.bratdragonname,
+.bratgreenheroname,
+.bratredheroname,
+.brattasticname,
+.bratyellowheroname,
+.sourbratname,
+.tropicalbratname,
+.bajabratbtn,
+.bananasiclebtn,
+.bananabratpiebtn,
+.bratberrybtn,
+.bratberryblastbtn,
+.bratberrydelightbtn,
+.bratstasisbtn,
+.bratblueherobtn,
+.bratbonkersbtn,
+.bratdragonbtn,
+.bratgreenherobtn,
+.bratredherobtn,
+.brattasticbtn,
+.bratyellowherobtn,
+.sourbratbtn,
+.tropicalbratbtn
+{
+    width: 100%;
+    min-height: 30px;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
+    justify-content: center;
+    -webkit-justify-content: center;
+    position: relative;
+    margin: 5px 0px 5px 0px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
-/*---columns---*/
-#column
+.flBox1,
+.flBox2,
+.flBox3,
+.flBox4 
 {
-    height: auto !important; 
+    overflow: hidden;
 }
 
-#column-middle
+.adBanner 
 {
-    height: auto !important; 
+    overflow: hidden;
+    background: url(../img/bgs/rollingvapor.gif) no-repeat center center;
+    background-size: 100%;
 }
 
-.column-flex-center
+.adBanner figure 
 {
-    height: auto !important;
+    width: 400%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0;
+    animation: 30s banner infinite;
+}
+
+.adBanner figure img 
+{
+    width: 25%;
+    float: left;
+}
+
+.aboutText
+{
+    min-width: 75%;
+    max-width: 75%;
+    min-height: 30px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 5px auto 5px auto;
+    display: block;
+    border: 1px solid transparent;
+}
+
+disc
+{
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    font-size: 15px;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -55,17 +486,14 @@
     justify-content: center;
     -webkit-justify-content: center;
 }
+/*----------------------------------------------------------------------------------------------------------------------*/
 
-.column-flex-spaced
-{
-    height: auto !important;
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-}
+
+
+
+
+
+
 
 
 

@@ -1,87 +1,20 @@
+
+
+
+
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
 
 
-/*---classes---*/
 
-/*---backgrounds---*/
-.bg9
-{
-    background: url(../img/bgs/9.jpg) no-repeat center center;
-    background-size: 100%;
-}
-
-.bg10
-{
-    background: url(../img/bgs/10.jpg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.bg13 
-{
-    background: url(../img/bgs/13.jpg) no-repeat center center;
-    background-size: 100%;
-}
-
-.bg15
-{
-    background: url(../img/bgs/15.gif) no-repeat center center;
-    background-size: 100%;
-}
-
-.bg20 
-{
-    background: url(../img/bgs/20.jpg) no-repeat center center;
-    background-size: 100%;
-}
-
-/*---borders---*/
-.border-all 
-{
-    border: 5px #444;
-    border-style: groove;
-} 
-
-.border-bottom 
-{
-    border-bottom: 1px solid #444;
-}
-
-/*---flex wrap---*/
-.flex 
-{
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap; 
-    -webkit-flex-wrap: wrap;
-}
-
-.center 
-{
-    justify-content: center;
-    -webkit-justify-content: center;
-}
-
-.space 
-{
-    justify-content: space-around; 
-    -webkit-justify-content: space-around;
-}
-
-/*---font awesome---*/
-.fa-smwh
+.fa-set1
 {
     color: white;
     padding-left: 5px;
     padding-right: 5px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
-
-.fa-smwh:hover
+.fa-set1:hover
 {
     color: red;
 }
-

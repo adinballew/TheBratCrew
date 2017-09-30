@@ -1,262 +1,84 @@
 extends layout
 
 block content
-	navmen(style='margin: 20px 0px 20px 0px;')
-		column1
-			a.navmen(href='#avpop') BRAT Juice
-			| |
-			a.navmen(href='') About BRAT
-			| |
-			a.navmen(href='') Contact
-		column4
-			search
-				input
-				searchbtn
-					a(href='')
-						i.fa.fa-search.fasearch(aria-hidden='true')
-	row(style='margin: 20px 0px 20px 0px;')
-		sidemen
-			hbox
-				| Flavor Choices
-			a.sidemen(href='#avpop') Candy Flavor
-			a.sidemen(href='#avpop') Desert Flavor
-			a.sidemen(href='#avpop') Drink Flavor
-			a.sidemen(href='#avpop') Fruit Flavor
-			a.sidemen(href='#avpop') Mint Flavor
-			a.sidemen(href='#avpop') Tobacco Flavor
-			a.sidemen(href='#avpop') Special Flavor
-			sbox
-		slider
-			figure
-				img(src='assets/img/slider/a1.png')
-				img(src='assets/img/slider/a2.png')
-				img(src='assets/img/slider/a3.png')
-				img(src='assets/img/slider/a1.png')
-	wrapper1
-	hbar
-		| Our Top Selling Flavors
-	row
-		box1.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberry.png')
-			flavors
-				| BRATberry
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box2.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberryblast.png')
-			flavors
-				| BRATberry Blast
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box3.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberrydelight.png')
-			flavors
-				| BRATberry Delight
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box4.wide25
-			flavors
-				img(src='assets/img/juice/bonkers.png')
-			flavors
-				| Bonkers
-			flavors
-				a.chopt(href='#avpop') Choose Options
-	wrapper1
-	hbar
-		| Our Online Menu (many more flavors available at our locations...)
-	row
-		box1.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bajabrat.png')
-			flavors
-				| Baja BRAT
-			flavors
-				a.chopt(href='#bajabrat') Choose Options
-		box2.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bananabratpie.png')
-			flavors
-				| Banana BRAT Pie
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box3.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bonkers.png')
-			flavors
-				| Bonkers
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box4.wide25
-			flavors
-				img(src='assets/img/juice/bratberry.png')
-			flavors
-				| BRATberry
-			flavors
-				a.chopt(href='#avpop') Choose Options
-	row
-		box1.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberryblast.png')
-			flavors
-				| BRATberry Blast
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box2.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberrydelight.png')
-			flavors
-				| BRATberry Delight
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box3.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratberrytropical.png')
-			flavors
-				| BRATberry Tropical
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box4.wide25
-			flavors
-				img(src='assets/img/juice/bratsickle.png')
-			flavors
-				| BRATsicle
-			flavors
-				a.chopt(href='#avpop') Choose Options
-	row
-		box1.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratstasis.png')
-			flavors
-				| BRATstasis
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box2.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/brattastic.png')
-			flavors
-				| BRATastic
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box3.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratbluehero.png')
-			flavors
-				| BRAT Blue Hero
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box4.wide25
-			flavors
-				img(src='assets/img/juice/bratdragon.png')
-			flavors
-				| BRAT Dragon
-			flavors
-				a.chopt(href='#avpop') Choose Options
-	row
-		box1.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratgreenhero.png')
-			flavors
-				| BRAT Green Hero
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box2.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratredhero.png')
-			flavors
-				| BRAT Red Hero
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box3.wide25.m-right5
-			flavors
-				img(src='assets/img/juice/bratyellowhero.png')
-			flavors
-				| BRAT Yellow Hero
-			flavors
-				a.chopt(href='#avpop') Choose Options
-		box4.wide25
-			flavors
-				img(src='assets/img/juice/sourbrat.png')
-			flavors
-				| Sour BRAT
-			flavors
-				a.chopt(href='#avpop') Choose Options
-	wrapper1
-	hbar
-		| About BRAT
-	row
-		p
-			| BRAT Vapor is owned by theBRATcrew, LLC which was founded by Jackie & Richard Berka. BRAT Vapor is currently working on
-			| becoming a franchise and expanding into new cities and states. The BRAT Vapor brand has been around since 2015. BRAT Vapor is
-			| the first shop in Tahlequah Oklahoma to offer a college student discount and to implement a Hero's Discount for veteran & active
-			| military, police officers and firefighters.
-			br
-			br
-			|                 BRAT Juice is an 80/20 vg over pg mixture, with the maximum allowed flavor. There are no additives like sweeteners. Our sweet flavors
-			|                 are sweet due to the mixture of flavor concentrates that we use.
-			br
-			br
-			|                 You must be 18 years of age or older to purchase BRAT Juice, and in some states the required age is 21 years of age or older. Please
-			|                 check your state laws before attmepting to make a purchase through our site. As with any vapor juice...please keep juice away
-			|                 from children and pets.
-			br
-			br
-			|                 This sites style was designed by Richard Berka (CEO of theBRATcrew, LLC) and the functionality design was done by Adin Ballew (CEO of
-			|                 B-Line PC Services, and lead tech of BRAT Vapor).
-	footer
-		row
-			column1.wide100.borderfull
-				textlines
-					br
-					br
-					br
-					br
-					br
-					|                         theBRATcrew, LLC
-					br
-					|                         BRAT Vapor
-					br
-					|                         email: richard@thebratcrew.com
-					br
-					|                         phone: (918) 772-5101
-					|                         address: 304 N. Muskogee Avenue Tahlequah, Ok. 74464
-					br
-					br
-			column2.wide100.bordergroove(style='margin-bottom: 60px;')
-				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.2764396743696!2d-94.97198678366445!3d35.91573302468036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c9fbf163f847dd%3A0xa615e2c7cd98fcc4!2sBRAT+Vapor+Lounge!5e0!3m2!1sen!2sus!4v1506442002728', width='100%', height='450', frameborder='0', style='border:0', allowfullscreen='')
-	wrapper1
-	#avpop
-	wrapper1
-		row.wide100
-			wrapper2
-				img(src='assets/img/warning.png', style='width: 150px; height: 150px; margin-left: 50px; margin-top: 20px;')
-				row
-					p(style='color: black; font-size: 19px; font-weight: bold; padding-left: 100px; padding-top: 0px; padding-bottom: 10px;')
-						| You MUST be at least 18 years of age or older to make purchases from this site. By clicking yes you are certifying that
-						| you are of legal age. This popup will continue to show until you create an account and login.
-				rowpop
-					a.chopt(href='#', style='margin-left: 50px;') I am under 18
-					a.chopt(href='#') I am over 18
-	#bajabrat
-	rowpop
-		img(src='assets/img/juice/bajabrat.png')
-	rowpop
-	rowpop
-	rowpop
-	#bananabratpie
-	#bonkers
-	#bratberry
-	#bratberryblast
-	#bratberrydelight
-	#bratberrytropical
-	#bratsicle
-	#bratstasis
-	#bratastic
-	#bratbluehero
-	#bratdragon
-	#bratgreenhero
-	#bratredhero
-	#bratyellowhero
-	#sourbrat
+	#wrapper
+		.box
+			.sideNslide
+				.side(style='border: 1px solid #999;')
+					.headingRow Flavors
+					a.sidemen.switcher(href='/all_flavors') All Flavors
+					a.sidemen.switcher(href='/candy_flavors') Candy Flavors
+					a.sidemen.switcher(href='/desert_flavors') Desert Flavors
+					a.sidemen.switcher(href='/drink_flavors') Drink Flavors
+					a.sidemen.switcher(href='/fruit_flavors') Fruit Flavors
+					a.sidemen.switcher(href='/special_flavors') Special Flavors
+					a.sidemen.switcher(href='/tobacco_flavors') Tobacco Flavors
+				.slide(style='border: 1px solid #999;')
+					figure
+						img(src='./assets/img/slider/a1.png')
+						img(src='./assets/img/slider/a2.png')
+						img(src='./assets/img/slider/a3.png')
+						img(src='./assets/img/slider/a1.png')
+		.box
+			.titleRow(style='border: 1px solid #999;') Our Top Selling Flavors
+			.productRow
+				.tsBox1(style='border: 1px solid #999;')
+					.tsBox1img
+						img(src='./assets/img/juice/bajabrat.png', style='width: 100%; height: 100%; position: relative;')
+					.tsBox1name Baja BRAT
+					.tsBox1btn
+						a.ts1.switcher(href='') Choose Options
+				.tsBox2(style='border: 1px solid #999;')
+					.tsBox2img
+						img(src='./assets/img/juice/bratberry.png', style='width: 100%; height: 100%; position: relative;')
+					.tsBox2name BRATberry
+					.tsBox2btn
+						a.ts2.switcher(href='') Choose Options
+				.tsBox3(style='border: 1px solid #999;')
+					.tsBox3img
+						img(src='./assets/img/juice/bonkers.png', style='width: 100%; height: 100%; position: relative;')
+					.tsBox3name BRAT Bonkers
+					.tsBox3btn
+						a.ts3.switcher(href='') Choose Options
+				.tsBox4(style='border: 1px solid #999;')
+					.tsBox4img
+						img(src='./assets/img/juice/sourbrat.png', style='width: 100%; height: 100%; position: relative;')
+					.tsBox4name Sour BRAT
+					.tsBox4btn
+						a.ts4.switcher(href='') Choose Options
+		.box
+			.adBanner(style='border: 1px solid #999;')
+				figure
+					img(src='./assets/img/slider/banner1.png')
+					img(src='./assets/img/slider/banner2.png')
+					img(src='./assets/img/slider/banner3.png')
+					img(src='./assets/img/slider/banner1.png')
+		.box
+			.titleRow(style='border: 1px solid #999;') About BRAT & BRAT Juice
+			#about
+				.aboutText
+					p1
+						| BRAT Vapor was founded by Richard & Jackie Berka in 2015. The first brick and mortar location was in Locust Grove
+						| Oklahoma, but due to electrical issues with the building, the decision was made to relocate the shop to Tahlequah
+						| Oklahoma. theBRATcrew LLC is a family owned and operated business, which will soon include not only BRAT Vapor
+						| locations, but BRAT Vapor Wholesale warehouses as well.
+						br
+						br
+						|                     BRAT Juice is a smooth 80/20 vg over pg mix with the maximum allowed flavor content. BRAT Vapor rents our ISO certified
+						|                                   lab space to mix this unbelievably awesome juice. No food coloring or other additives are mixed into our juice. Our
+						|                                   sweet flavors are sweet due to the flavor recipes we use.
+						br
+						br
+						|                     You must be 18 years of age or older, and some states even require that you be 21 years of age or older. Please check
+						|                                   your state vaping age before attempting to make purchases from our site. Age verification is required at checkout.
+						br
+						br
+						|                     This site was designed and integrated by Richard Berka and Adin Ballew. If you are looking for a website for your business
+						|                                   you can contact us and speak with Adin about a site build.
+		.box
+			#contact(style='margin-top: 40px; margin-bottom: 40px; border-bottom: 1px solid #999;')
+				center
+					h1
+						| Call us @ (918) 772-5101
+						br
+						|                 Email us @ customerservice@thebratcrew.com
