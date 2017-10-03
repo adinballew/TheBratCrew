@@ -13,26 +13,7 @@ const db = pgp(config);
 /* GET home page. */
 router.get('/', (req, res, next) =>
 {
-	// db.any('select * from flavors')
-	// 	.then(function (result)
-	// 	{
-	// 		console.log(result);
 	res.render('index', {title: 'theBRATcrew'});
-	// })
-	// .catch(function (err)
-	// {
-	// 	console.log(err);
-	// });
-});
-
-router.get('/contact', (req, res, next) =>
-{
-	res.render('contact', {});
-});
-
-router.get('/about', (req, res, next) =>
-{
-	res.render('about', {});
 });
 
 /** @class all_flavors
