@@ -1,46 +1,37 @@
-
-
-
-
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
 
-
 a,
-a:hover
-{
+a:hover {
     text-decoration: none;
 }
 
-a.toplinks
-{
+a.toplinks {
     color: white;
     text-decoration: none;
     line-height: 30px;
     padding-left: 5px;
     padding-right: 5px;
 }
-a.toplinks:hover
-{
+
+a.toplinks:hover {
     color: red;
 }
 
-a.footerlinks
-{
+a.footerlinks {
     color: white;
     text-decoration: none;
     line-height: 30px;
     padding-left: 5px;
     padding-right: 5px;
 }
-a.footerlinks:hover
-{
+
+a.footerlinks:hover {
     color: red;
 }
 
-a.nav
-{
+a.nav {
     min-height: 30px;
     color: white;
     line-height: 30px;
@@ -50,14 +41,13 @@ a.nav
     padding-left: 10px;
     padding-right: 10px;
 }
-a.nav:hover 
-{
+
+a.nav:hover {
     border: 1px solid #999;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
-a.sidemen
-{
+a.sidemen {
     min-width: 100%;
     min-height: 30px;
     position: relative;
@@ -66,22 +56,21 @@ a.sidemen
     color: black;
     line-height: 30px;
     border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
     margin: 5px 0px 5px 0px;
     padding-left: 20px;
     font-weight: bold;
 }
-a.sidemen:hover 
-{
+
+a.sidemen:hover {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    background: url(../img/bgs/20.jpg) no-repeat center center; 
+    background: url(../img/bgs/20.jpg) no-repeat center center;
     background-size: 100%;
     color: white;
 }
 
-a.fmen
-{
+a.fmen {
     min-width: 100%;
     min-height: 20px;
     position: relative;
@@ -90,26 +79,25 @@ a.fmen
     color: white;
     line-height: 20px;
     border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent; 
+    border-bottom: 1px solid transparent;
     margin: 5px 0px 5px 0px;
     font-size: 15px;
     padding-left: 10px;
     border-radius: 5px;
 }
-a.fmen:hover 
-{
+
+a.fmen:hover {
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     color: red
 }
 
-a.subbtn 
-{
+a.subbtn {
     background: black;
     color: white;
 }
-a.subbtn:hover
-{
+
+a.subbtn:hover {
     background: gray;
     color: black;
 }
@@ -118,23 +106,7 @@ a.ts1,
 a.ts2,
 a.ts3,
 a.ts4,
-a.baja,
-a.banana,
-a.bananapie,
-a.berry,
-a.berryblast,
-a.berrydelight,
-a.stasis,
-a.bluehero,
-a.bonkers,
-a.dragon,
-a.greenhero,
-a.redhero,
-a.tastic,
-a.yellowhero,
-a.sour,
-a.tropical
-{
+a.flavoradd {
     width: 95%;
     height: 30px;
     background: black;
@@ -147,48 +119,27 @@ a.tropical
     color: white;
     line-height: 30px;
 }
+
 a.ts1:hover,
 a.ts2:hover,
 a.ts3:hover,
 a.ts4:hover,
-a.baja:hover,
-a.banana:hover,
-a.bananapie:hover,
-a.berry:hover,
-a.berryblast:hover,
-a.berrydelight:hover,
-a.stasis:hover,
-a.bluehero:hover,
-a.bonkers:hover,
-a.dragon:hover,
-a.greenhero:hover,
-a.redhero:hover,
-a.tastic:hover,
-a.yellowhero:hover,
-a.sour:hover,
-a.tropical:hover 
-{
-    background: url(../img/bgs/20.jpg) no-repeat center center; 
+a.flavoradd:hover {
+    background: url(../img/bgs/20.jpg) no-repeat center center;
     background-size: 100%;
 }
 
-p
-{
+p {
     color: white;
     font-size: 18px;
     margin: 20px 0px 20px 0px;
     text-align: left;
 }
 
-h1
-{
+h1 {
     color: white;
     font-size: 18px;
     margin: 20px 0px 20px 0px;
-}
-
-p2
-{
 }
 
 

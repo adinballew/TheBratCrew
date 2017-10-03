@@ -1,31 +1,7 @@
-
-
-
-
 /*----This is the professional design build of the first BRAT template----*/
 /*----September 18, 2017 theBRATcrew LLC----*/
 /*----Integration design by Adin Ballew----*/
-
-
-body
-{
-    width: 100%;
-    background: url(../img/bgs/10.jpg) no-repeat center center;  
-    background-size: cover;  
-    background-attachment: fixed;
-    color: white;  
-    font-size: 20px;  
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;  
-    display: -webkit-flex; 
-    flex-wrap: wrap;  
-    -webkit-flex-wrap: wrap; 
-    justify-content: center;  
-    -webkit-justify-content: center;
-}
-
-#wrapper 
-{
+#wrapper {
     min-height: 30px;
     height: auto;
     border: 1px solid transparent;
@@ -38,8 +14,7 @@ body
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
-.box
-{
+.box {
     width: 99%;
     min-height: 30px;
     height: auto;
@@ -63,8 +38,7 @@ body
 .info,
 .map,
 .footer,
-.footerRow
-{
+.footerRow {
     width: 99%;
     min-height: 30px;
     height: auto;
@@ -74,21 +48,9 @@ body
     right: 0;
 }
 
-.productRow2
-{
-    width: 100%;
-    min-height: 30px;
-    height: auto;
-    margin: 5px auto 5px auto;
-    left: 0;
-    right: 0;
-    padding-left: 4px;
-}
-
-textBox,
-itemsBox,
-amountBox
-{
+.textBox,
+.itemsBox,
+.amountBox {
     width: auto;
     height: 30px;
     line-height: 30px;
@@ -99,15 +61,13 @@ amountBox
     padding-right: 5px;
 }
 
-.navmen
-{
+.navmen {
     background: url(../img/bgs/20.jpg) no-repeat center center;
     background-size: 100%;
     line-height: 30px;
 }
 
-.topL
-{
+.topL {
     min-width: 30px;
     max-width: 400px;
     min-height: 30px;
@@ -118,8 +78,7 @@ amountBox
     float: left;
 }
 
-.topR
-{
+.topR {
     min-width: 30px;
     max-width: 300px;
     min-height: 30px;
@@ -130,8 +89,7 @@ amountBox
     float: right;
 }
 
-.logoH
-{
+.logoH {
     width: 180px;
     height: 180px;
     position: relative;
@@ -139,8 +97,7 @@ amountBox
     margin: 5px;
 }
 
-.logoF
-{
+.logoF {
     width: 100px;
     height: 100px;
     position: relative;
@@ -150,10 +107,10 @@ amountBox
     right: 0;
 }
 
-.searchBox
-{
-    width: 250px;
+.searchBox {
+    width: 275px;
     min-height: 30px;
+    max-height: 30px;
     overflow: hidden;
     position: relative;
     display: block;
@@ -161,8 +118,7 @@ amountBox
     margin: 5px;
 }
 
-.inputSection
-{
+.inputSection {
     width: 200px;
     min-height: 20px;
     position: relative;
@@ -171,8 +127,7 @@ amountBox
     display: block;
 }
 
-.submitSection
-{
+.submitSection {
     width: 50px;
     min-height: 30px;
     position: relative;
@@ -180,25 +135,23 @@ amountBox
     background: black;
     display: block;
 }
-.submitSection:hover
-{
+
+.submitSection:hover {
     background: gray;
     color: red;
 }
 
-.side 
-{
+.side {
     min-height: 30px;
     position: relative;
     float: left;
     margin: 5px 10px 5px 0px;
     overflow: hidden;
-    background: linear-gradient(gray,gray,silver,gray,gray);
-    background: -webkit-linear-gradient(gray,gray,silver,gray,gray);
+    background: linear-gradient(gray, gray, silver, gray, gray);
+    background: -webkit-linear-gradient(gray, gray, silver, gray, gray);
 }
 
-.headingRow 
-{
+.headingRow {
     width: calc(100% - 2px);
     min-height: 40px;
     line-height: 40px;
@@ -213,8 +166,7 @@ amountBox
     background-size: 100%;
 }
 
-.titleRow
-{
+.titleRow {
     height: auto;
     margin: 5px auto 5px auto;
     position: relative;
@@ -229,8 +181,7 @@ amountBox
     line-height: 40px;
 }
 
-.slide 
-{
+.slide {
     min-height: 30px;
     border: 1px solid transparent;
     position: relative;
@@ -241,8 +192,7 @@ amountBox
     background-size: 100%;
 }
 
-.slide figure 
-{
+.slide figure {
     width: 400%;
     height: auto;
     position: relative;
@@ -254,8 +204,7 @@ amountBox
     animation: 30s slider infinite;
 }
 
-.slide figure img 
-{
+.slide figure img {
     width: 25%;
     float: left;
 }
@@ -268,23 +217,7 @@ amountBox
 .flBox2,
 .flBox3,
 .flBox4,
-.bajabrat,
-.bananasicle,
-.bananabratpie,
-.bratberry,
-.bratberryblast,
-.bratberrydelight,
-.bratstasis,
-.bratbluehero,
-.bratbonkers,
-.bratdragon,
-.bratgreenhero,
-.bratredhero,
-.brattastic,
-.bratyellowhero,
-.sourbrat,
-.tropicalbrat
-{
+.flavorbox {
     width: calc(25% - 9.5px);
     min-height: 30px;
     border: 1px solid transparent;
@@ -296,36 +229,12 @@ amountBox
 .tsBox1,
 .tsBox2,
 .tsBox3,
+.tsBox4,
 .flBox1,
 .flBox2,
-.flBox3
-{
-    margin: 5px 3.5px 5px 3.5px;
-}
-
-.bajabrat,
-.bananasicle,
-.bananabratpie,
-.bratberryblast,
-.bratberrydelight,
-.bratstasis,
-.bratbonkers,
-.bratdragon,
-.bratgreenhero,
-.brattastic,
-.bratyellowhero,
-.sourbrat
-{
-    margin: 5px 3.5px 5px 3.5px;
-}
-
-.tsBox4,
+.flBox3,
 .flBox4,
-.bratberry,
-.bratbluehero,
-.bratredhero,
-.tropicalbrat
-{
+.flavorbox{
     margin: 5px 3.5px 5px 3.5px;
 }
 
@@ -333,25 +242,9 @@ amountBox
 .tsBox2,
 .tsBox3,
 .tsBox4,
-.bajabrat,
-.bananasicle,
-.bananabratpie,
-.bratberry,
-.bratberryblast,
-.bratberrydelight,
-.bratstasis,
-.bratbluehero,
-.bratbonkers,
-.bratdragon,
-.bratgreenhero,
-.bratredhero,
-.brattastic,
-.bratyellowhero,
-.sourbrat,
-.tropicalbrat 
-{
-    background: linear-gradient(gray,gray,silver,gray,gray);
-    background: -webkit-linear-gradient(gray,gray,silver,gray,gray);
+.flavorbox {
+    background: linear-gradient(gray, gray, silver, gray, gray);
+    background: -webkit-linear-gradient(gray, gray, silver, gray, gray);
 }
 
 .tsBox1img,
@@ -366,55 +259,9 @@ amountBox
 .tsBox2btn,
 .tsBox3btn,
 .tsBox4btn,
-.bajabratimg,
-.bananasicleimg,
-.bananabratpieimg,
-.bratberryimg,
-.bratberryblastimg,
-.bratberrydelightimg,
-.bratstasisimg,
-.bratblueheroimg,
-.bratbonkersimg,
-.bratdragonimg,
-.bratgreenheroimg,
-.bratredheroimg,
-.brattasticimg,
-.bratyellowheroimg,
-.sourbratimg,
-.tropicalbratimg,
-.bajabratname,
-.bananasiclename,
-.bananabratpiename,
-.bratberryname,
-.bratberryblastname,
-.bratberrydelightname,
-.bratstasisname,
-.bratblueheroname,
-.bratbonkersname,
-.bratdragonname,
-.bratgreenheroname,
-.bratredheroname,
-.brattasticname,
-.bratyellowheroname,
-.sourbratname,
-.tropicalbratname,
-.bajabratbtn,
-.bananasiclebtn,
-.bananabratpiebtn,
-.bratberrybtn,
-.bratberryblastbtn,
-.bratberrydelightbtn,
-.bratstasisbtn,
-.bratblueherobtn,
-.bratbonkersbtn,
-.bratdragonbtn,
-.bratgreenherobtn,
-.bratredherobtn,
-.brattasticbtn,
-.bratyellowherobtn,
-.sourbratbtn,
-.tropicalbratbtn
-{
+.flavorimage,
+.flavorname,
+.flavorchoosebtn {
     width: 100%;
     min-height: 30px;
     display: flex;
@@ -432,20 +279,17 @@ amountBox
 .flBox1,
 .flBox2,
 .flBox3,
-.flBox4 
-{
+.flBox4 {
     overflow: hidden;
 }
 
-.adBanner 
-{
+.adBanner {
     overflow: hidden;
     background: url(../img/bgs/rollingvapor.gif) no-repeat center center;
     background-size: 100%;
 }
 
-.adBanner figure 
-{
+.adBanner figure {
     width: 400%;
     height: auto;
     position: relative;
@@ -454,14 +298,12 @@ amountBox
     animation: 30s banner infinite;
 }
 
-.adBanner figure img 
-{
+.adBanner figure img {
     width: 25%;
     float: left;
 }
 
-.aboutText
-{
+.aboutText {
     min-width: 75%;
     max-width: 75%;
     min-height: 30px;
@@ -473,8 +315,7 @@ amountBox
     border: 1px solid transparent;
 }
 
-disc
-{
+.disc {
     text-align: center;
     color: white;
     line-height: 20px;
@@ -486,6 +327,7 @@ disc
     justify-content: center;
     -webkit-justify-content: center;
 }
+
 /*----------------------------------------------------------------------------------------------------------------------*/
 
 

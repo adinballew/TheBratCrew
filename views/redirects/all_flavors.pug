@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+	#wrapper
+		.box
+			include ../partials/flavor_select
+		each item in all_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
+		.box
+			.adBanner
+				figure
+					img(src='./assets/img/slider/banner1.png')
+					img(src='./assets/img/slider/banner2.png')
+					img(src='./assets/img/slider/banner3.png')
+					img(src='./assets/img/slider/banner1.png')
+		.box
+			#contact(style='margin-top: 40px; margin-bottom: 40px; border-bottom: 1px solid #999;')
+				center
+					h1
+						| Call us @ (918) 772-5101
+						br
+						|                 Email us @ customerservice@thebratcrew.com
