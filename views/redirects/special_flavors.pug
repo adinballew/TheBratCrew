@@ -4,14 +4,14 @@ block content
 	#wrapper
 		.box
 			include ../partials/flavor_select
-			.productRow2
-				.sourbrat(style='border: 1px solid #999;')
-					.sourbratimg
-						img(src='./assets/img/juice/sourbrat.png', style='width: 100%; height: 100%; position: relative;')
-					.sourbratname
-						| Sour BRAT
-					.sourbratbtn
-						a.sour.switcher(href='') Choose Options
+		each item in special_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
 		.box
 			.adBanner(style='border: 1px solid #999;')
 				figure

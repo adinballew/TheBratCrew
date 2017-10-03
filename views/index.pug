@@ -21,31 +21,14 @@ block content
 						img(src='./assets/img/slider/a1.png')
 		.box
 			.titleRow Our Top Selling Flavors
-			.productRow
-				.tsBox1
-					.tsBox1img
-						img(src='./assets/img/juice/bajabrat.png', style='width: 100%; height: 100%; position: relative;')
-					.tsBox1name Baja BRAT
-					.tsBox1btn
-						a.ts1.switcher(href='') Choose Options
-				.tsBox2
-					.tsBox2img
-						img(src='./assets/img/juice/bratberry.png', style='width: 100%; height: 100%; position: relative;')
-					.tsBox2name BRATberry
-					.tsBox2btn
-						a.ts2.switcher(href='') Choose Options
-				.tsBox3
-					.tsBox3img
-						img(src='./assets/img/juice/bonkers.png', style='width: 100%; height: 100%; position: relative;')
-					.tsBox3name BRAT Bonkers
-					.tsBox3btn
-						a.ts3.switcher(href='') Choose Options
-				.tsBox4
-					.tsBox4img
-						img(src='./assets/img/juice/sourbrat.png', style='width: 100%; height: 100%; position: relative;')
-					.tsBox4name Sour BRAT
-					.tsBox4btn
-						a.ts4.switcher(href='') Choose Options
+		each item in top_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
 		.box
 			.adBanner
 				figure

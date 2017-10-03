@@ -4,57 +4,14 @@ block content
 	#wrapper
 		.box
 			include ../partials/flavor_select
-			.productRow2
-				.bratbonkers(style='border: 1px solid #999;')
-					.bratbonkersimg
-						img(src='./assets/img/juice/bonkers.png', style='width: 100%; height: 100%; position: relative;')
-					.bratbonkersname
-						| BRAT Bonkers
-					.bratbonkersbtn
-						a.bonkers.switcher(href='') Choose Options
-				.bratberryblast(style='border: 1px solid #999;')
-					.bratberryblastimg
-						img(src='./assets/img/juice/bratberryblast.png', style='width: 100%; height: 100%; position: relative;')
-					.bratberryblastname
-						| BRATberry Blast
-					.bratberryblastbtn
-						a.berryblast.switcher(href='') Choose Options
-				.bratberrydelight(style='border: 1px solid #999;')
-					.bratberrydelightimg
-						img(src='./assets/img/juice/bratberrydelight.png', style='width: 100%; height: 100%; position: relative;')
-					.bratberrydelightname
-						| BRATberry Delight
-					.bratberrydelightbtn
-						a.berrydelight.switcher(href='') Choose Options
-				.bratberry(style='border: 1px solid #999;')
-					.bratberryimg
-						img(src='./assets/img/juice/bratberry.png', style='width: 100%; height: 100%; position: relative;')
-					.bratberryname
-						| BRATberry
-					.bratberrybtn
-						a.berry.switcher(href='') Choose Options
-			.productRow2
-				.bratdragon(style='border: 1px solid #999;')
-					.bratdragonimg
-						img(src='./assets/img/juice/bratdragon.png', style='width: 100%; height: 100%; position: relative;')
-					.bratdragonname
-						| BRAT Dragon
-					.bratdragonbtn
-						a.dragon.switcher(href='') Choose Options
-				.brattastic(style='border: 1px solid #999;')
-					.brattasticimg
-						img(src='./assets/img/juice/brattastic.png', style='width: 100%; height: 100%; position: relative;')
-					.brattasticname
-						| BRAT Tastic
-					.brattasticbtn
-						a.tastic.switcher(href='') Choose Options
-				.tropicalbrat(style='border: 1px solid #999;')
-					.tropicalbratimg
-						img(src='./assets/img/juice/bratberrytropical.png', style='width: 100%; height: 100%; position: relative;')
-					.tropicalbratname
-						| Tropical BRAT
-					.tropicalbratbtn
-						a.tropical.switcher(href='') Choose Options
+		each item in fruit_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
 		.box
 			.adBanner(style='border: 1px solid #999;')
 				figure

@@ -4,14 +4,14 @@ block content
 	#wrapper
 		.box
 			include ../partials/flavor_select
-			.productRow2
-				.bratstasis(style='border: 1px solid #999;')
-					.bratstasisimg
-						img(src='./assets/img/juice/bratstasis.png', style='width: 100%; height: 100%; position: relative;')
-					.bratstasisname
-						| BRATstasis
-					.bratstasisbtn
-						a.stasis.switcher(href='') Choose Options
+		each item in candy_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
 		.box
 			.adBanner(style='border: 1px solid #999;')
 				figure

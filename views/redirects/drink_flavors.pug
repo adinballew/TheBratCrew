@@ -4,21 +4,14 @@ block content
 	#wrapper
 		.box
 			include ../partials/flavor_select
-			.productRow2
-				.bajabrat(style='border: 1px solid #999;')
-					.bajabratimg
-						img(src='./assets/img/juice/bajabrat.png', style='width: 100%; height: 100%; position: relative;')
-					.bajabratname
-						| Baja BRAT
-					.bajabratbtn
-						a.baja.switcher(href='') Choose Options
-				.bratgreenhero(style='border: 1px solid #999;')
-					.bratgreenheroimg
-						img(src='./assets/img/juice/bratgreenhero.png', style='width: 100%; height: 100%; position: relative;')
-					.bratgreenheroname
-						| BRAT Green Hero
-					.bratgreenherobtn
-						a.greenhero.switcher(href='') Choose Options
+		each item in drink_flavors
+			.flavorbox
+				.flavorimage
+					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
+				.flavorname
+					| #{item.name}
+				.flavorchoosebtn
+					a.flavoradd.switcher(href='') Choose Options
 		.box
 			.adBanner(style='border: 1px solid #999;')
 				figure
