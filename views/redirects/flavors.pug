@@ -4,7 +4,7 @@ block content
 	#wrapper
 		.box
 			include ../partials/flavor_select
-		each item in desert_flavors
+		each item in flavors
 			.flavorbox
 				.flavorimage
 					img(src=item.image_path, style='width: 100%; height: 100%; position: relative;')
@@ -13,12 +13,12 @@ block content
 				.flavorchoosebtn
 					a.flavoradd.switcher(href='') Choose Options
 		.box
-			.adBanner(style='border: 1px solid #999;')
+			.adBanner
 				figure
-					img(src='./assets/img/slider/banner1.png')
-					img(src='./assets/img/slider/banner2.png')
-					img(src='./assets/img/slider/banner3.png')
-					img(src='./assets/img/slider/banner1.png')
+					img(src='/./assets/img/slider/banner1.png')
+					img(src='/./assets/img/slider/banner2.png')
+					img(src='/./assets/img/slider/banner3.png')
+					img(src='/./assets/img/slider/banner1.png')
 		.box
 			#contact(style='margin-top: 40px; margin-bottom: 40px; border-bottom: 1px solid #999;')
 				center

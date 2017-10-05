@@ -1,14 +1,7 @@
 const express = require('express');
 const router = new express.Router();
-const promise = require('bluebird');
-const config = require('../dbconfig').config;
-
-const options = {
-	promiseLib: promise
-};
-
-const pgp = require('pg-promise')(options);
-const db = pgp(config);
+const db = require('../db.js');
+const sql = require('../sql/sql.js').queries;
 
 /* GET home page. */
 /** @class top_flavors
@@ -17,12 +10,10 @@ const db = pgp(config);
  *  @property image_path **/
 router.get('/', (req, res, next) =>
 {
-	console.time('test');
-	db.any("select * from flavors limit 4") //Add functionality for popularity
+	db.any(sql.top4)
 		.then(function (result)
 		{
 			res.render('index', {title: 'theBRATcrew', top_flavors: result});
-			console.timeEnd('test');
 		})
 		.catch(function (err)
 		{
@@ -30,18 +21,16 @@ router.get('/', (req, res, next) =>
 		});
 });
 
-/** @class all_flavors
+/** @class flavors
  *  @property name
  *  @property description
  *  @property image_path **/
-router.get('/all_flavors', (req, res, next) =>
+router.get('/flavors', (req, res, next) =>
 {
-	console.time('test');
-	db.any("select * from flavors")
+	db.any(sql.searchAll)
 		.then(function (result)
 		{
-			res.render('redirects/all_flavors', {all_flavors: result});
-			console.timeEnd('test');
+			res.render('redirects/flavors', {flavors: result});
 		})
 		.catch(function (err)
 		{
@@ -49,113 +38,12 @@ router.get('/all_flavors', (req, res, next) =>
 		});
 });
 
-/** @class candy_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/candy_flavors', (req, res, next) =>
+router.get('/flavors/:flavor', (req, res, next) =>
 {
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Candy'")
+	db.any(sql.search, {flavor_type: req.params.flavor})
 		.then(function (result)
 		{
-			res.render('redirects/candy_flavors', {candy_flavors: result});
-			console.timeEnd('test');
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
-});
-
-/** @class desert_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/desert_flavors', (req, res, next) =>
-{
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Desert'")
-		.then(function (result)
-		{
-			res.render('redirects/desert_flavors', {desert_flavors: result});
-			console.timeEnd('test');
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
-});
-
-/** @class drink_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/drink_flavors', (req, res, next) =>
-{
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Drink'")
-		.then(function (result)
-		{
-			res.render('redirects/drink_flavors', {drink_flavors: result});
-			console.timeEnd('test');
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
-});
-
-/** @class fruit_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/fruit_flavors', (req, res, next) =>
-{
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Fruit'")
-		.then(function (result)
-		{
-			res.render('redirects/fruit_flavors', {fruit_flavors: result});
-			console.timeEnd('test');
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
-});
-
-
-/** @class special_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/special_flavors', (req, res, next) =>
-{
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Special'")
-		.then(function (result)
-		{
-			res.render('redirects/special_flavors', {special_flavors: result});
-			console.timeEnd('test');
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
-});
-/** @class tobacco_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/tobacco_flavors', (req, res, next) =>
-{
-	console.time('test');
-	db.any("select * from flavors where flavor_type = 'Tobacco'")
-		.then(function (result)
-		{
-			res.render('redirects/tobacco_flavors', {tobacco_flavors: result});
-			console.timeEnd('test');
+			res.render('redirects/flavors', {flavors: result});
 		})
 		.catch(function (err)
 		{
