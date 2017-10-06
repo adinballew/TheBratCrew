@@ -1,0 +1,1 @@
+SELECT * FROM flavors WHERE flavor_type = ${flavor_type}

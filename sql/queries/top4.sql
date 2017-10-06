@@ -1,0 +1,1 @@
+SELECT * FROM flavors LIMIT 4
