@@ -1,0 +1,135 @@
+@media screen and (min-width: 300px) {
+    .flavor-box {
+        width: 50%;
+    }
+
+    .flavor-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .flavor-img img {
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+        margin-top: 15px;
+        border: 1px solid #333;
+        background: #333;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .flavor-box {
+        width: 25%;
+    }
+
+    .flavor-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .flavor-img img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin-top: 15px;
+        border: 1px solid #333;
+        background: #333;
+    }
+}
+
+#flavors {
+    width: 90%;
+    min-height: 40px;
+    display: block;
+    margin: 25px 0 0;
+}
+
+.flavors {
+    width: calc(100% - 10px);
+    height: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    background: linear-gradient(left, #000 0%, #111 50%, #000 100%);
+    background: -webkit-linear-gradient(left, #000 0%, #111 50%, #000 100%);
+}
+
+.flavor-box {
+    min-height: 30px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.marT10 {
+    margin-top: 10px;
+}
+
+.flavor-img {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.flavor-name {
+    width: 100%;
+    min-height: 30px;
+    line-height: 30px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.flavor-button {
+    width: 100%;
+    min-height: 30px;
+    line-height: 30px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.flavorbtn {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    background: url('../images/bgs/20.jpg') no-repeat center center;
+    background-size: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.flavorbtn:hover {
+    background: linear-gradient(to left, #333 0%, #111 50%, #333 100%);
+    background: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,190 @@
+@media screen and (min-width: 300px) {
+    .header logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header social,
+    .header search,
+    .header account,
+    .header cart,
+    .header a,
+    .header t {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .header logo img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .header social,
+    .header search,
+    .header account,
+    .header cart,
+    .header a,
+    .header t {
+        font-size: 20px;
+    }
+}
+
+#header {
+    width: 90%;
+    min-height: 30px;
+    height: auto;
+    display: block;
+}
+
+.header {
+    width: calc(100% - 10px);
+    height: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, transparent 0%, transparent 0%, transparent 0%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+.header logo {
+    min-width: 30px;
+    width: auto;
+    min-height: 30px;
+    height: auto;
+    border: 1px solid transparent;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.header logo img {
+    margin: 10px 0;
+}
+
+.header box {
+    min-width: 30px;
+    width: auto;
+    min-height: 30px;
+    max-width: 280px;
+    height: auto;
+    border: 1px solid transparent;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.header social {
+    min-width: 30px;
+    width: auto;
+    height: 30px;
+    border: 1px solid transparent;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+    margin: 10px 0 0;
+}
+
+.header search {
+    width: 255px;
+    height: 30px;
+    overflow: hidden;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: block;
+    line-height: 30px;
+    color: black;
+}
+
+.header search input {
+    width: 200px;
+    height: 30px;
+    display: block;
+    float: left;
+    font-size: 20px;
+}
+
+.header search submit {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    float: right;
+    background: red;
+}
+
+.header account {
+    min-width: 30px;
+    width: auto;
+    height: 30px;
+    border: 1px solid transparent;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.header cart {
+    min-width: 30px;
+    width: auto;
+    height: 30px;
+    border: 1px solid transparent;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    padding: 0 7px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header a.s {
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    padding: 0 7px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    margin: 2px 0 0;
+}
+
+.header a.s:hover {
+    color: black;
+}
+
+.header t {
+    line-height: 30px;
+    padding: 0 7px;
+}

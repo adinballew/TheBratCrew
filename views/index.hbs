@@ -1,0 +1,77 @@
+{{!< default}}
+<div id="sidebar">
+    <div class="sidebar">
+        <div class="side-menu">
+            <div class="tbox">
+                <t>Flavors</t>
+            </div>
+            <div class="link-box"><a href="/flavors/candy">candy flavors</a></div>
+            <div class="link-box"><a href="/flavors/desert">desert flavors</a></div>
+            <div class="link-box"><a href="/flavors/drink">drink flavors</a></div>
+            <div class="link-box"><a href="/flavors/fruit">fruit flavors</a></div>
+            <div class="link-box"><a href="/flavors/mint">mint flavors</a></div>
+            <div class="link-box"><a href="/flavors/special">special flavors</a></div>
+        </div>
+        <div class="slide">
+            <figure>
+                <img src="/images/slider/a2.png"/>
+                <img src="/images/slider/a2.png"/>
+                <img src="/images/slider/a3.png"/>
+            </figure>
+        </div>
+    </div>
+</div>
+<div id="top-selling">
+    <div class="top-selling">
+        <t>Our Top Selling Flavors</t>
+    </div>
+</div>
+<div id="flavors">
+    <div class="flavors">
+        {{#each top_flavors}}
+            <div class="flavor-box">
+                <div class="flavor-img">
+                    <img src={{image_path}}>
+                </div>
+                <div class="flavor-name">
+                    {{name}}
+                </div>
+                <div class="flavor-button">
+                    <a href="#">
+                        <div class="flavorbtn">
+                            Options
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+<div id="about">
+    <div class="about">
+        <t>About BRAT & Our Juice</t>
+    </div>
+</div>
+<div id="p1-box">
+    <p1>
+        BRAT Vapor is owned by theBRATcrew, LLC which is owned by Jackie and Richard Berka. Family owned and
+        operated, the BRAT
+        Vapor brand was founded in 2015. Since then the name has been growing by leaps and bounds, and is
+        quickly
+        becoming one
+        of the top names.<br/><br/> Plans have already been set into motion to open up the first ever BRAT
+        Wholesale
+        Warehouse. When everything is complete
+        you will be able to find top-notch vaping products at hard-to-beat prices.<br/><br/> BRAT Juice is a
+        smooth
+        80/20 blend of juice, with flavors that are so amazing you won't be able to get enough of them.
+        BRAT Vapor juice is prepared in a state of the art ISO certified facility and steeped to perfection.
+        With
+        BRAT juice you
+        never have to worry about what types of extra additives are in the mix because there are none, just the
+        way
+        it should be.
+        Our sweet flavors are sweet due to the mixtures of our recipes, not because we add stuff to make it that
+        way.<br/><br/>
+    </p1>
+</div>

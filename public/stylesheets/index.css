@@ -1,0 +1,380 @@
+@media screen and (min-width: 300px) {
+    .side-menu {
+        display: none;
+    }
+
+    .slide {
+        width: calc(100% - 10px);
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .side-menu {
+        width: 200px;
+        height: 350px;
+        border: 5px solid transparent;
+        -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+        border-image-slice: 1;
+        display: block;
+        position: relative;
+        float: left;
+        background: linear-gradient(left, #000 0%, #111 50%, #000 100%);
+        background: -webkit-linear-gradient(left, #000 0%, #111 50%, #000 100%);
+    }
+
+    .slide {
+        width: calc(100% - 200px - 10px - 10px - 10px);
+        height: 350px;
+    }
+
+}
+
+#sidebar {
+    width: 90%;
+    min-height: 30px;
+    height: auto;
+    display: block;
+}
+
+.sidebar {
+    width: 100%;
+    height: 100%;
+    border-image-slice: 1;
+    display: block;
+    position: relative;
+    line-height: 30px;
+    margin: 20px 0 0;
+}
+
+.slide {
+    background: url('../images/bgs/15.gif') no-repeat center center;
+    background-size: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: block;
+    position: relative;
+    float: right;
+    overflow: hidden;
+}
+
+.slide figure {
+    width: 400%;
+    height: auto;
+    max-height: 400px;
+    position: relative;
+    float: left;
+    margin: 0;
+    animation: 30s slide infinite;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.slide figure img {
+    width: 25%;
+    float: left;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    30% {
+        left: 0;
+    }
+    33% {
+        left: -100%;
+    }
+    63% {
+        left: -100%;
+    }
+    66% {
+        left: -200%;
+    }
+    97% {
+        left: -200%;
+    }
+    100% {
+        left: -300%;
+    }
+}
+
+.tbox {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    margin: 15px 15px 15px 0;
+}
+
+.tbox t {
+    padding: 0 0 0 15px;
+    font-size: 27px;
+    color: white;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    text-align: left;
+}
+
+.link-box {
+    width: 200px;
+    height: auto;
+    display: block;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.link-box:hover {
+    background: linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    background: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+}
+
+.side-menu a {
+    line-height: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: tahoma, serif;
+    padding: 0 0 0 15px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 300px) {
+    .top-selling t {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .top-selling t {
+        font-size: 27px;
+    }
+}
+
+#top-selling {
+    width: 90%;
+    height: 40px;
+    display: block;
+    margin: 15px 0 0;
+}
+
+.top-selling {
+    width: calc(100% - 10px);
+    height: 100%;
+    background: url('../images/bgs/20.jpg') no-repeat center center;
+    background-size: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.top-selling t {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    line-height: 40px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 300px) {
+    #p1-box {
+        width: auto;
+        height: auto;
+        padding: 30px 50px 30px 50px;
+        display: block;
+    }
+
+    .about t {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #p1-box {
+        width: auto;
+        height: auto;
+        padding: 30px 100px 30px 100px;
+        display: block;
+    }
+
+    .about t {
+        font-size: 27px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #p1-box {
+        width: auto;
+        height: auto;
+        padding: 30px 200px 30px 200px;
+        display: block;
+    }
+}
+
+#about {
+    width: 90%;
+    height: 40px;
+    display: block;
+    margin: 25px 0 0;
+}
+
+.about {
+    width: calc(100% - 10px);
+    height: 100%;
+    background: url('../images/bgs/20.jpg') no-repeat center center;
+    background-size: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.about t {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    line-height: 40px;
+}
+
+p1 {
+    color: white;
+    font-size: 18px;
+    font-family: tahoma, serif;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 300px) {
+    .account-menu a {
+        padding: 0 7px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .account-menu a {
+        padding: 0 15px;
+    }
+}
+
+#account-menu {
+    width: 90%;
+    min-height: 30px;
+    height: auto;
+    display: block;
+    font-family: "Droid Sans", serif;
+    margin-top: 15px;
+}
+
+.account-menu {
+    width: calc(100% - 10px);
+    height: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, transparent 0%, transparent 50%, transparent 100%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.account-menu a {
+    text-decoration: none;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.account-menu a:hover {
+    color: white;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 300px) {
+    #current-order,
+    #details-overview,
+    #rewards-overview,
+    #last-order {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #current-order,
+    #details-overview,
+    #rewards-overview,
+    #last-order {
+        width: 50%;
+    }
+}
+
+#account {
+    width: 90%;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+#current-order,
+#last-order,
+#details-overview,
+#rewards-overview {
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+}
+
+.account-container {
+    width: 250px;
+    height: 250px;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image-slice: 1;
+    display: block;
+    margin-top: 15px;
+    background: linear-gradient(left, #000 0%, #111 50%, #000 100%);
+    background: -webkit-linear-gradient(left, #000 0%, #111 50%, #000 100%);
+}
+
+.account-tbox {
+    width: 100%;
+    min-height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: left;
+}
+
+.account-tbox h {
+    width: auto;
+    padding: 15px;
+    font-size: 21px;
+}
+
+.account-tbox t {
+    width: auto;
+    padding-left: 15px;
+    font-family: arial, serif;
+}

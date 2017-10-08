@@ -30,7 +30,7 @@ router.get('/flavors', (req, res, next) =>
 	db.any(sql.searchAll)
 		.then(function (result)
 		{
-			res.render('redirects/flavors', {flavors: result});
+			res.render('flavors', {flavors: result});
 		})
 		.catch(function (err)
 		{
@@ -43,7 +43,7 @@ router.get('/flavors/:flavor', (req, res, next) =>
 	db.any(sql.search, {flavor_type: req.params.flavor})
 		.then(function (result)
 		{
-			res.render('redirects/flavors', {flavors: result});
+			res.render('flavors', {flavors: result});
 		})
 		.catch(function (err)
 		{

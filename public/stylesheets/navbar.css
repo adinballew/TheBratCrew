@@ -1,0 +1,49 @@
+@media screen and (min-width: 300px) {
+    .navbar a {
+        padding: 0 7px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .navbar a {
+        padding: 0 15px;
+    }
+}
+
+#navbar {
+    width: 90%;
+    max-height: 30px;
+    height: auto;
+    display: block;
+    font-family: arial, serif;
+}
+
+.navbar {
+    width: calc(100% - 10px);
+    height: 100%;
+    background: url('../images/bgs/20.jpg') no-repeat center center;
+    background-size: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, #333 0%, #111 50%, #333 100%);
+    border-image: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.navbar a:hover {
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}

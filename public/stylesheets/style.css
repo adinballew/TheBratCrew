@@ -1,0 +1,33 @@
+/*--- 
+this is theBRATcrew company page template 
+build start date 9-29-17
+---*/
+
+body {
+    background-size: cover;
+    background: black url('../images/bgs/2.jpg') no-repeat fixed center center;
+    overflow-x: hidden;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    color: white;
+    font-family: "Times New Roman", monospace;
+
+}
+
+@media screen and (min-width: 300px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+

@@ -1,0 +1,48 @@
+@media screen and (min-width: 300px) {
+    .flavor-nav a {
+        padding: 0 7px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .flavor-nav a {
+        padding: 0 15px;
+    }
+}
+
+#flavor-nav {
+    width: 90%;
+    min-height: 30px;
+    height: auto;
+    display: block;
+    font-family: arial, serif;
+    margin-top: 15px;
+}
+
+.flavor-nav {
+    width: calc(100% - 10px);
+    height: 100%;
+    border: 5px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(left, transparent 0%, transparent 50%, transparent 100%);
+    border-image-slice: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    line-height: 30px;
+}
+
+.flavor-nav a {
+    text-decoration: none;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.flavor-nav a:hover {
+    color: white;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}

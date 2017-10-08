@@ -1,23 +1,29 @@
 const express = require('express');
+const hbs = require('express-hbs');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-// Require route handlers and use the same connection pool
 const index = require('./routes/index');
 const users = require('./routes/users');
 
 const app = express();
 
 // view engine setup
+app.set('view engine', 'hbs');
+
+app.engine('hbs', hbs.express4({
+	defaultLayout: __dirname + '/views/layouts/default.hbs',
+	partialsDir: __dirname + '/views/partials',
+	layoutsDir: __dirname + '/views/layouts'
+}));
+
 app.set('views', path.join(__dirname, 'views'));
 
-app.set('view engine', 'pug');
-
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -27,7 +33,7 @@ app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) =>
+app.use(function (req, res, next)
 {
 	const err = new Error('Not Found');
 	err.status = 404;
@@ -35,7 +41,7 @@ app.use((req, res, next) =>
 });
 
 // error handler
-app.use((err, req, res, next) =>
+app.use(function (err, req, res, next)
 {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
