@@ -9,11 +9,13 @@
     <title>{{title}}</title>
     {{>css}}
 </head>
-{{>header}}
-{{>navbar}}
 <body>
-{{{body}}}
-</body>
+<div id="wrapper" class="container">
+    {{>header}}
+    {{>navbar}}
+    {{{body}}}
+</div>
 {{>footer}}
 {{>js}}
+</body>
 </html>

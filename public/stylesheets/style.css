@@ -1,33 +1,51 @@
-/*--- 
-this is theBRATcrew company page template 
-build start date 9-29-17
----*/
+html, body {
+    height: 100%;
+}
 
 body {
     background-size: cover;
     background: black url('../images/bgs/2.jpg') no-repeat fixed center center;
+    position: relative;
     overflow-x: hidden;
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    justify-content: center;
-    -webkit-justify-content: center;
     color: white;
     font-family: "Times New Roman", monospace;
+    font-size: 20px;
 
 }
 
-@media screen and (min-width: 300px) {
-    body {
-        font-size: 17px;
-    }
+html > body #wrapper {
+    height: auto;
 }
 
-@media screen and (min-width: 900px) {
-    body {
-        font-size: 20px;
-    }
+#wrapper {
+    min-height: 100%;
 }
 
+.nopadding {
+    padding: 0 !important;
+}
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.glass {
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    border-radius: 1%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
