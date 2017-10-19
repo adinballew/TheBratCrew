@@ -33,7 +33,3 @@
 #fa-links a i:hover {
     color: red;
 }
-
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #111111 !important;
-}

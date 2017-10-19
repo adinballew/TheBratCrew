@@ -8,22 +8,25 @@
                         <h3>Flavors</h3>
                     </li>
                     <li>
-                        <a href="/flavors/candy">candy flavors</a>
+                        <a href="/">all</a>
                     </li>
                     <li>
-                        <a href="/flavors/desert">desert flavors</a>
+                        <a href="/flavors/candy">candy</a>
                     </li>
                     <li>
-                        <a href="/flavors/drink">drink flavors</a>
+                        <a href="/flavors/desert">desert</a>
                     </li>
                     <li>
-                        <a href="/flavors/fruit">fruit flavors</a>
+                        <a href="/flavors/drink">drink</a>
                     </li>
                     <li>
-                        <a href="/flavors/mint">mint flavors</a>
+                        <a href="/flavors/fruit">fruit</a>
                     </li>
                     <li>
-                        <a href="/flavors/special">special flavors</a>
+                        <a href="/flavors/mint">mint</a>
+                    </li>
+                    <li>
+                        <a href="/flavors/special">special</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +61,7 @@
                 </div>
                 <div id="flavors" class="d-flex justify-content-around">
                     {{#each top_flavors}}
-                        <div class="flavor-box glass">
+                        <div class="flavor-box">
                             <div class="flavor-img">
                                 <img src={{image_path}}>
                             </div>
@@ -67,9 +70,7 @@
                             </div>
                             <div class="flavor-button">
                                 <a href="#">
-                                    <div class="flavorbtn">
-                                        Options
-                                    </div>
+                                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Options</button>
                                 </a>
                             </div>
                         </div>

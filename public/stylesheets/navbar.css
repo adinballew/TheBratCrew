@@ -12,11 +12,6 @@
     -webkit-transition: all 0.5s;
 }
 
-.navbar a:hover {
-    color: black;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
 nav {
     white-space: nowrap;
 }
@@ -37,6 +32,17 @@ nav li {
     margin-left: -4px;
 }
 
+nav li:hover {
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+}
+
 nav li:first-child {
     margin-left: 0;
 }
@@ -45,14 +51,28 @@ nav .form-inline {
     display: inline-block;
 }
 
-.btn-outline-success {
-    color: #ff0202;
-    background-color: #111;
-    border-color: transparent;
+nav .btn {
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.btn-outline-success:hover {
-    color: #111;
-    background-color: #ff0202;
-    border-color: transparent;
+nav .btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+nav .btn-primary {
+    color: #ff0202;
+    background: #111;
+}
+
+nav .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background: #111;
+}
+
+nav .btn-primary:active, .btn-primary.active {
+    background: #111;
+    box-shadow: none;
 }
