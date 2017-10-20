@@ -1,31 +1,36 @@
 {{!< default}}
 {{>flavor-nav}}
-<div id="flavors">
-    <div class="flavors">
-        {{#each flavors}}
-            <div class="flavor-box">
-                <div class="flavor-img">
-                    <img src={{image_path}}>
-                </div>
-                <div class="flavor-name">
-                    {{name}}
-                </div>
-                <div class="flavor-button">
-                    <a href="#">
-                        <div class="flavorbtn">
-                            Options
+<div class="row">
+    <div class="col-md-12">
+        <div id="flavors">
+            <div class="flavors">
+                {{#each flavors}}
+                    <div class="flavor-box">
+                        <div class="flavor-img">
+                            <img src={{image_path}}>
                         </div>
-                    </a>
-                </div>
+                        <div class="flavor-name">
+                            {{name}}
+                        </div>
+                        <div class="flavor-button">
+                            <a href="#">
+                                <button class="btn btn-primary my-2 my-sm-0" type="submit">Options</button>
+                            </a>
+                        </div>
+                    </div>
+                {{/each}}
             </div>
-        {{/each}}
+        </div>
+        <div id="p1-box">
+            <p1>
+                You must be 18 years of age or older to make purchases from this site. Some states even have
+                minimum
+                age requirement of 21. Please check with your states age requirements and legal smoking ages
+                before
+                attempting to purchase juice from us. Our juice contains PG, VG, Nicotine & artificial flavoring
+                only.
+                No extra additives are used.
+            </p1>
+        </div>
     </div>
-</div>
-<div id="p1-box">
-    <p1>
-        You must be 18 years of age or older to make purchases from this site. Some states even have minimum
-        age requirement of 21. Please check with your states age requirements and legal smoking ages before
-        attempting to purchase juice from us. Our juice contains PG, VG, Nicotine & artificial flavoring only.
-        No extra additives are used.
-    </p1>
 </div>

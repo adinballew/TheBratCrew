@@ -30,6 +30,7 @@ nav li {
     *zoom: 1;
     text-align: center;
     margin-left: -4px;
+    margin-right: 5px;
 }
 
 nav li:hover {

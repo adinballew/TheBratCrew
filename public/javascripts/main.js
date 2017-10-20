@@ -1,6 +1,14 @@
+// Carousel Controller
 $('#carouselController').carousel();
 
-$('#offcanvasleft').click(function ()
+// Modal On-click
+$(document).on("click", ".open-AddFlavor", function ()
 {
-	$('.row-offcanvas-left').toggleClass('active');
+	let flavorId = $(this).data('id');
+	let name = $(this).data('name');
+	let imagepath = $(this).data('imagepath');
+	$(".modal-body #flavorId").val(flavorId);
+	$(".modal-body #flavorName").text(name);
+	$(".modal-body #flavorImage").attr('src', imagepath).show();
 });
+

@@ -33,3 +33,7 @@
 #fa-links a i:hover {
     color: red;
 }
+
+#rightHeader a:hover {
+    color: red;
+}

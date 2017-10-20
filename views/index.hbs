@@ -1,38 +1,38 @@
 {{!< default}}
 <div id="middlePanel">
     <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarLeft">
+        <div class="col-xs-2 col-sm-2 col-md-2 sidebar-offcanvas" id="sidebarLeft">
             <div class="sidebar">
-                <ul class="nav">
-                    <li>
-                        <h3>Flavors</h3>
+                <ul id="sideNav" class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors">all</a>
                     </li>
-                    <li>
-                        <a href="/">all</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/candy">candy</a>
                     </li>
-                    <li>
-                        <a href="/flavors/candy">candy</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/desert">desert</a>
                     </li>
-                    <li>
-                        <a href="/flavors/desert">desert</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/drink">drink</a>
                     </li>
-                    <li>
-                        <a href="/flavors/drink">drink</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/fruit">fruit</a>
                     </li>
-                    <li>
-                        <a href="/flavors/fruit">fruit</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/mint">mint</a>
                     </li>
-                    <li>
-                        <a href="/flavors/mint">mint</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/special">special</a>
                     </li>
-                    <li>
-                        <a href="/flavors/special">special</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/flavors/tobacco">tobacco</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-10">
+        <div class="col-xs-12 col-sm-12 col-md-10">
 
             <div id="carouselController" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -69,8 +69,10 @@
                                 {{name}}
                             </div>
                             <div class="flavor-button">
-                                <a href="#">
-                                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Options</button>
+                                <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
+                                   data-imagepath="{{image_path}}" href="#addFlavor"
+                                   class="open-AddFlavor btn btn-primary my-2 my-sm-0">
+                                    Options
                                 </a>
                             </div>
                         </div>
@@ -78,30 +80,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="banner">
-                <h2>About</h2>
-            </div>
-            <p>
-                BRAT Vapor is owned by theBRATcrew, LLC which is owned by Jackie and Richard Berka. Family owned and
-                operated, the BRAT
-                Vapor brand was founded in 2015. Since then the name has been growing by leaps and bounds, and is
-                quickly
-                becoming one
-                of the top names.<br/><br/> Plans have already been set into motion to open up the first ever BRAT
-                Wholesale
-                Warehouse. When everything is complete
-                you will be able to find top-notch vaping products at hard-to-beat prices.<br/><br/> BRAT Juice is a
-                smooth
-                80/20 blend of juice, with flavors that are so amazing you won't be able to get enough of them.
-                BRAT Vapor juice is prepared in a state of the art ISO certified facility and steeped to perfection.
-                With
-                BRAT juice you
-                never have to worry about what types of extra additives are in the mix because there are none, just the
-                way
-                it should be.
-                Our sweet flavors are sweet due to the mixtures of our recipes, not because we add stuff to make it that
-                way.<br/><br/>
-            </p>
-        </div>
     </div>
+</div>
+<div class="modal hide" id="addFlavor">
+    <div class="modal-body">
+        <p id="flavorName"></p>
+        <img id="flavorImage">
+        <input type="text" name="flavorId" id="flavorId" value=""/>
+    </div>
+</div>

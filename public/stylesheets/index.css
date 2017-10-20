@@ -37,24 +37,61 @@
     }
 }
 
+#sidebarLeft {
+    padding-right: 0;
+}
+
 .sidebar {
     height: 100%;
     width: 100%;
-    background: #111;
-}
-
-.sidebar .nav {
-    padding: 10%;
 }
 
 .sidebar li {
-    width: 100%;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-align: center;
+    margin: 6%;
+}
+
+.sidebar li {
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    border-radius: 1%;
+}
+
+.sidebar li:hover {
+    background: transparent;
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    border-radius: 1%;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .carousel {
     background: url('../images/bgs/15.gif') no-repeat center center;
     background-size: 100%;
     display: block;
+}
+
+#flavors {
+    text-align: center;
 }
 
 .banner {
@@ -111,10 +148,21 @@
 }
 
 .flavor-button .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    border: thin solid #f7f7f7;
+    border: thin solid #ffffff;
 }
 
 .flavor-button .btn-primary:active, .btn-primary.active {
     background: transparent;
     box-shadow: none;
+}
+
+.modal-body {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+    background: #111111;
 }

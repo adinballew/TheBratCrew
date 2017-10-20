@@ -11,7 +11,6 @@
 }
 
 #flavor-nav {
-    width: 90%;
     min-height: 30px;
     height: auto;
     display: block;
@@ -20,9 +19,7 @@
 }
 
 .flavor-nav {
-    width: calc(100% - 10px);
     height: 100%;
-    border: 5px solid transparent;
     -webkit-border-image: -webkit-linear-gradient(left, transparent 0%, transparent 50%, transparent 100%);
     border-image-slice: 1;
     display: flex;

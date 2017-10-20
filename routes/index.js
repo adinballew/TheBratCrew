@@ -21,6 +21,11 @@ router.get('/', (req, res, next) =>
 		});
 });
 
+router.get('/about', (req, res, next) =>
+{
+	res.render('about', {});
+});
+
 /** @class flavors
  *  @property name
  *  @property description
