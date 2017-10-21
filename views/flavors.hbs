@@ -13,8 +13,10 @@
                             {{name}}
                         </div>
                         <div class="flavor-button">
-                            <a href="#">
-                                <button class="btn btn-primary my-2 my-sm-0" type="submit">Options</button>
+                            <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
+                               data-imagepath="{{image_path}}" href="#addFlavor"
+                               class="open-AddFlavor btn btn-primary my-2 my-sm-0">
+                                Options
                             </a>
                         </div>
                     </div>
@@ -34,3 +36,4 @@
         </div>
     </div>
 </div>
+{{>options-modal}}

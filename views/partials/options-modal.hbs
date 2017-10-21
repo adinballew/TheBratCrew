@@ -1,0 +1,63 @@
+<div class="modal hide" id="addFlavor">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-modal-box">
+                        <p id="flavorName"></p>
+                        <img id="flavorImage" src="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="right-modal-box">
+                        <form>
+                            <div class="form-group">
+                                <label for="nic-select">Nicotine:</label>
+                                <select class="form-control" id="nic-select">
+                                    <option>0mg</option>
+                                    <option>3mg</option>
+                                    <option>6mg</option>
+                                    <option>12mg</option>
+                                </select>
+                                <label for="size-select">Size:</label>
+                                <select class="form-control" id="size-select">
+                                    <option>10ml - $5.99</option>
+                                    <option>30ml - $9.99</option>
+                                    <option>60ml - $19.99</option>
+                                    <option>120ml - $29.99</option>
+                                </select>
+                                <label for="qty-select">Qty:</label>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                                data-type="minus" data-field="">
+                                          <i class="fa fa-minus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                    <input type="text" id="qty-select" name="qty-select"
+                                           class="form-control input-number"
+                                           value="1" min="1" max="100">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                                data-type="plus" data-field="">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <br>
+                                <input type="submit" class="btn btn-primary" value="Add to Cart">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>

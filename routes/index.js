@@ -43,6 +43,12 @@ router.get('/flavors', (req, res, next) =>
 		});
 });
 
+
+/** @class flavors
+ *  @param {string} [req.params.flavor]
+ *  @property name
+ *  @property description
+ *  @property image_path **/
 router.get('/flavors/:flavor', (req, res, next) =>
 {
 	db.any(sql.search, {flavor_type: req.params.flavor})

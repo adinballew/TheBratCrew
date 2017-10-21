@@ -45,3 +45,11 @@ img {
 a {
     color: white;
 }
+
+.btn-primary:focus, .btn:focus {
+    box-shadow: none !important;
+}
+
+.btn-primary:hover {
+    border-color: transparent;
+}

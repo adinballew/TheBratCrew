@@ -52,28 +52,30 @@ nav .form-inline {
     display: inline-block;
 }
 
-nav .btn {
-    border: 0 none;
-    font-weight: 700;
+nav .btn, .modal .btn {
+    border: thin solid #333333;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
-nav .btn:focus, .btn:active:focus, .btn.active:focus {
+nav .btn:focus, nav .btn:active:focus,
+.modal .btn:focus, .modal .btn:active:focus {
     outline: 0 none;
 }
 
-nav .btn-primary {
-    color: #ff0202;
-    background: #111;
-}
-
-nav .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+nav .btn-primary, .modal .btn-primary {
     color: #ffffff;
     background: #111;
 }
 
-nav .btn-primary:active, .btn-primary.active {
+nav .btn-primary:hover, nav .btn-primary:focus, nav .btn-primary:active, nav .btn-primary.active,
+.modal .btn-primary:hover, .modal .btn-primary:focus, .modal .btn-primary:active, .modal .btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #ff0202;
+    background: #111;
+}
+
+nav .btn-primary:active, nav .btn-primary.active,
+.modal .btn-primary:active, .modal .btn-primary.active {
     background: #111;
     box-shadow: none;
 }
