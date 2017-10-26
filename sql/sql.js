@@ -1,5 +1,6 @@
-const QueryFile = require('pg-promise').QueryFile;
-const path = require('path');
+"use strict";
+var QueryFile = require('pg-promise').QueryFile;
+var path = require('path');
 
 function sql(file)
 {

@@ -60,22 +60,24 @@
                     <h2>Top Flavors</h2>
                 </div>
                 <div id="flavors" class="d-flex justify-content-around">
-                    {{#each top_flavors}}
-                        <div class="flavor-box">
-                            <div class="flavor-img">
-                                <img src={{image_path}}>
+                    {{# each products }}
+                        {{# if this.top4}}
+                            <div class="flavor-box">
+                                <div class="flavor-img">
+                                    <img src={{this.imagepath}}>
+                                </div>
+                                <div class="flavor-name">
+                                    {{this.title}}
+                                </div>
+                                <div class="flavor-button">
+                                    <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
+                                       data-imagepath="{{imagepath}}" href="#addFlavor"
+                                       class="open-AddFlavor btn btn-primary my-2 my-sm-0">
+                                        Options
+                                    </a>
+                                </div>
                             </div>
-                            <div class="flavor-name">
-                                {{name}}
-                            </div>
-                            <div class="flavor-button">
-                                <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
-                                   data-imagepath="{{image_path}}" href="#addFlavor"
-                                   class="open-AddFlavor btn btn-primary my-2 my-sm-0">
-                                    Options
-                                </a>
-                            </div>
-                        </div>
+                        {{/if}}
                     {{/each}}
                 </div>
             </div>

@@ -24,13 +24,39 @@
             <div class="accountLinks">
                 <a href="/">my account</a>|<a href="#">login</a>
             </div>
-            <div class="cartLinks">
-                <a href="#">
-                    <i aria-hidden="true" class="fa fa-shopping-cart"></i>
+            <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                    {{# if session.cart.totalItems}}
+                        <span>({{session.cart.totalItems}})</span>
+                    {{/if}}
                 </a>
-                <t>Items -</t>
-                <t>0 -</t>
-                <t>$0.00</t>
+                {{# if session.cart.totalItems}}
+                    <div class="dropdown-menu">
+                        <div class="cart">
+                            {{# each session.cart.items}}
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        {{this.item.title}}
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        <span class="badge">{{this.quantity}}</span>
+                                    </div>
+                                    <div class="col-xs-4 text-right">
+                                        ${{this.price}}
+                                    </div>
+                                </div>
+                            {{/each}}
+                            <div class="row">
+                                <div class="text-right">
+                                    <div class="totalPrice">Total: ${{session.cart.totalPrice}}</div>
+                                    <a href="/cart" class="btn btn-success">Proceed</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/if}}
             </div>
         </div>
     </div> <!-- rightHeader TODO: Maybe Align rightHeader Better -->

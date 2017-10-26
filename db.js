@@ -1,6 +1,7 @@
-const promise = require('bluebird');
+"use strict";
+var promise = require('bluebird');
 
-const config = {
+var config = {
 	host: process.env.RDS_HOSTNAME,
 	port: process.env.RDS_PORT,
 	database: process.env.RDS_DB_NAME,
@@ -8,29 +9,29 @@ const config = {
 	password: process.env.RDS_PASSWORD,
 };
 
-const options = {
+var options = {
 	promiseLib: promise,
-	query(e)
+	query: function query(e)
 	{
 		console.log('QUERY:', e.query);
 	},
-	connect(client, isFresh)
+	connect: function connect(client, isFresh)
 	{
-		const cp = client.connectionParameters;
+		var cp = client.connectionParameters;
 		console.log('Connected to database:', cp.database);
 		if (isFresh)
 		{
 			console.log('Connection is Fresh');
 		}
 	},
-	disconnect(client)
+	disconnect: function disconnect(client)
 	{
-		const cp = client.connectionParameters;
-		console.log('Disconnecting from database:', cp.database)
+		var cp = client.connectionParameters;
+		console.log('Disconnecting from database:', cp.database);
 	}
 };
 
-const pgp = require('pg-promise')(options);
-const db = pgp(config);
+var pgp = require('pg-promise')(options);
+var db = pgp(config);
 
 module.exports = db;

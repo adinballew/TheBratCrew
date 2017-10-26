@@ -1,65 +1,73 @@
-const express = require('express');
-const router = new express.Router();
-const db = require('../db.js');
-const sql = require('../sql/sql.js').queries;
+"use strict";
+var express = require('express');
+var router = express.Router();
 
-/* GET home page. */
-/** @class top_flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/', (req, res, next) =>
+var fs = require('fs');
+
+var Cart = require('../models/cart');
+var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
+
+router.get('/', function (req, res, next)
 {
-	db.any(sql.top4)
-		.then(function (result)
+	res.render('index',
 		{
-			res.render('index', {title: 'theBRATcrew', top_flavors: result});
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
+			title: 'theBRATcrew',
+			products: products
+		}
+	);
 });
 
-router.get('/about', (req, res, next) =>
+router.get('/flavors', function (req, res, next)
+{
+	res.render('flavors',
+		{
+			products: products
+		}
+	);
+});
+
+router.get('/about', function (req, res, next)
 {
 	res.render('about', {});
 });
 
-/** @class flavors
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/flavors', (req, res, next) =>
+router.get('/add/:id', function (req, res, next)
 {
-	db.any(sql.searchAll)
-		.then(function (result)
-		{
-			res.render('flavors', {flavors: result});
-		})
-		.catch(function (err)
-		{
-			console.log(err);
-		});
+	var productId = req.params.id;
+	var cart = new Cart(req.session.cart ? req.session.cart : {});
+	var product = products.filter(function (item)
+	{
+		return item.id == productId;
+	});
+	cart.add(product[0], productId);
+	req.session.cart = cart;
+	res.redirect('/');
 });
 
-
-/** @class flavors
- *  @param {string} [req.params.flavor]
- *  @property name
- *  @property description
- *  @property image_path **/
-router.get('/flavors/:flavor', (req, res, next) =>
+router.get('/cart', function (req, res, next)
 {
-	db.any(sql.search, {flavor_type: req.params.flavor})
-		.then(function (result)
-		{
-			res.render('flavors', {flavors: result});
-		})
-		.catch(function (err)
-		{
-			console.log(err);
+	if (!req.session.cart)
+	{
+		return res.render('cart', {
+			products: null
 		});
+	}
+	var cart = new Cart(req.session.cart);
+	res.render('cart', {
+		title: 'NodeJS Shopping Cart',
+		products: cart.getItems(),
+		totalPrice: cart.totalPrice
+	});
+});
+
+router.get('/remove/:id', function (req, res, next)
+{
+	var productId = req.params.id;
+	var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+	cart.remove(productId);
+	req.session.cart = cart;
+	res.redirect('/cart');
 });
 
 module.exports = router;

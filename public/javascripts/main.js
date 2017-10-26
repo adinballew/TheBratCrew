@@ -1,21 +1,22 @@
+"use strict";
 // Carousel Controller
 $('#carouselController').carousel();
 
 // Modal On-click
 $(document).on("click", ".open-AddFlavor", function ()
 {
-	let name = $(this).data('name');
-	let flavorId = $(this).data('id');
-	let imagepath = $(this).data('imagepath');
+	var name = $(this).data('name');
+	var flavorId = $(this).data('id');
+	var imagepath = $(this).data('imagepath');
 	$(".modal-body #flavorName").text(name);
-	$(".modal-body #flavorId").val(flavorId);
+	$(".modal-body #addToCart").attr('href', /add/ + flavorId);
 	$(".modal-body #flavorImage").attr('src', imagepath).show();
 });
 
 // Qty Select
 $(document).ready(function ()
 {
-	let quantity = 0;
+	var quantity = 0;
 	$('.quantity-right-plus').click(function (e)
 	{
 		e.preventDefault();
@@ -34,3 +35,6 @@ $(document).ready(function ()
 	});
 
 });
+
+// Dropdown toggle
+$('.dropdown-toggle').dropdown();

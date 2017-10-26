@@ -4,17 +4,17 @@
     <div class="col-md-12">
         <div id="flavors">
             <div class="flavors">
-                {{#each flavors}}
+                {{# each products}}
                     <div class="flavor-box">
                         <div class="flavor-img">
-                            <img src={{image_path}}>
+                            <img src={{this.imagepath}}>
                         </div>
                         <div class="flavor-name">
-                            {{name}}
+                            {{this.title}}
                         </div>
                         <div class="flavor-button">
-                            <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
-                               data-imagepath="{{image_path}}" href="#addFlavor"
+                            <a data-toggle="modal" data-id="{{this.id}}" data-name="{{this.title}}"
+                               data-imagepath="{{this.imagepath}}" href="#addFlavor"
                                class="open-AddFlavor btn btn-primary my-2 my-sm-0">
                                 Options
                             </a>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div id="p1-box">
-            <p1>
+            <p>
                 You must be 18 years of age or older to make purchases from this site. Some states even have
                 minimum
                 age requirement of 21. Please check with your states age requirements and legal smoking ages
@@ -32,7 +32,7 @@
                 attempting to purchase juice from us. Our juice contains PG, VG, Nicotine & artificial flavoring
                 only.
                 No extra additives are used.
-            </p1>
+            </p>
         </div>
     </div>
 </div>

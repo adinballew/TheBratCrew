@@ -1,0 +1,146 @@
+[
+  {
+	"id": 1,
+	"title": "Baja BRAT",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bajabrat.png",
+	"type": "drink",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 2,
+	"title": "Bananasicle BRAT",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bananasickle.png",
+	"type": "desert",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 3,
+	"title": "Banana BRAT Pie",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bananabratpie.png",
+	"type": "desert",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 4,
+	"title": "BRATberry Delight",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratberrydelight.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 5,
+	"title": "BRATberry",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratberry.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 6,
+	"title": "BRATberry Blast",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratberryblast.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 7,
+	"title": "Tropical BRAT",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratberrytropical.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 8,
+	"title": "Sour BRAT",
+	"description": "Some Description",
+	"imagepath": "/images/juice/sourbrat.png",
+	"type": "special",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 9,
+	"title": "BRAT Green Hero",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratgreenhero.png",
+	"type": "drink",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 10,
+	"title": "BRAT Dragon",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratdragon.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 11,
+	"title": "BRAT Tastic",
+	"description": "Some Description",
+	"imagepath": "/images/juice/brattastic.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  },
+  {
+	"id": 12,
+	"title": "BRAT Red Hero",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratredhero.png",
+	"type": "desert",
+	"price": 4.99,
+	"top4": true
+  },
+  {
+	"id": 13,
+	"title": "BRATstasis",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratstasis.png",
+	"type": "candy",
+	"price": 4.99,
+	"top4": true
+  },
+  {
+	"id": 14,
+	"title": "BRAT Yellow Hero",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratyellowhero.png",
+	"type": "desert",
+	"price": 4.99,
+	"top4": true
+  },
+  {
+	"id": 15,
+	"title": "BRAT Blue Hero",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bratbluehero.png",
+	"type": "desert",
+	"price": 4.99,
+	"top4": true
+  },
+  {
+	"id": 16,
+	"title": "BRAT Bonkers",
+	"description": "Some Description",
+	"imagepath": "/images/juice/bonkers.png",
+	"type": "fruit",
+	"price": 4.99,
+	"top4": false
+  }
+]

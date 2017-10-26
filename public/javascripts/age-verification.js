@@ -1,8 +1,9 @@
+"use strict";
 /*!
  * Simple Age Verification (https://github.com/Herudea/age-verification))
  */
 
-let modal_content,
+var modal_content,
 modal_screen;
 // Start Working ASAP.
 $(document).ready(function() {
@@ -25,24 +26,24 @@ av_legality_check = function() {
 av_showmodal = function() {
 	modal_screen = $('<div id="modal_screen"></div>');
 	modal_content = $('<div id="modal_content" style="display:none"></div>');
-	let modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
-	let modal_regret_wrapper = $('<div id="modal_regret_wrapper" class="content_wrapper" style="display:none;"></div>');
+	var modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
+	var modal_regret_wrapper = $('<div id="modal_regret_wrapper" class="content_wrapper" style="display:none;"></div>');
 
 	// Question Content
 	// language=HTML
-	let content_heading = $('<h2>Are you 18 or older?</h2>');
+	var content_heading = $('<h2>Are you 18 or older?</h2>');
 	// language=HTML
-	let content_buttons = $('<nav><ul><li><a href="#nothing" class="av_btn av_go" rel="yes">Yes</a></li><li><a href="#nothing" class="av_btn av_no" rel="no">No</a></li></nav>');
+	var content_buttons = $('<nav><ul><li><a href="#nothing" class="av_btn av_go" rel="yes">Yes</a></li><li><a href="#nothing" class="av_btn av_no" rel="no">No</a></li></nav>');
 	// language=HTML
-	let content_text = $('<p>You must verify that you are 18 years of age or older to enter this site.</p>');
+	var content_text = $('<p>You must verify that you are 18 years of age or older to enter this site.</p>');
 
 	// Regret Content
 	// language=HTML
-	let regret_heading = $('<h2>We\'re Sorry!</h2>');
+	var regret_heading = $('<h2>We\'re Sorry!</h2>');
 	// language=HTML
-	let regret_buttons = $('<nav><small>I hit the wrong button!</small> <ul><li><a href="#nothing" class="av_btn av_go" rel="yes">I\'m old enough!</a></li></ul></nav>');
+	var regret_buttons = $('<nav><small>I hit the wrong button!</small> <ul><li><a href="#nothing" class="av_btn av_go" rel="yes">I\'m old enough!</a></li></ul></nav>');
 	// language=HTML
-	let regret_text = $('<p>You must be 18 years of age or older to enter this site.</p>');
+	var regret_text = $('<p>You must be 18 years of age or older to enter this site.</p>');
 
 	modal_content_wrapper.append(content_heading, content_buttons, content_text);
 	modal_regret_wrapper.append(regret_heading, regret_text);
@@ -60,10 +61,10 @@ av_showmodal = function() {
 av_setCookie = function(e) {
 	e.preventDefault();
 
-	let is_legal = $(e.currentTarget).attr('rel');
+	var is_legal = $(e.currentTarget).attr('rel');
 
 	$.cookie('is_legal', is_legal, {
-		// expires: 365,
+		expires: 365,
 		path: '/'
 	});
 
@@ -88,9 +89,9 @@ av_showRegret = function() {
 
 av_positionPrompt = function() {
 	// language=JQuery-CSS
-	let top = ($(window).outerHeight() - $(`#modal_content`).outerHeight()) / 2;
+	var top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
 	// language=JQuery-CSS
-	let left = ($(window).outerWidth() - $(`#modal_content`).outerWidth()) / 2;
+	var left = ($(window).outerWidth() - $('#modal_content').outerWidth()) / 2;
 	modal_content.css({
 		'top': top,
 		'left': left
