@@ -31,15 +31,21 @@ router.get('/about', function (req, res, next)
 	res.render('about', {});
 });
 
-router.get('/add/:id', function (req, res, next)
+router.post('/test/:id', function (req, res, next)
+{
+	res.send("Id: " + req.params.id + " Quantity: " + req.body.qty);
+});
+
+router.post('/add/:id', function (req, res, next)
 {
 	var productId = req.params.id;
+	var quantity = parseInt(req.body.qty);
 	var cart = new Cart(req.session.cart ? req.session.cart : {});
 	var product = products.filter(function (item)
 	{
 		return item.id == productId;
 	});
-	cart.add(product[0], productId);
+	cart.add(product[0], productId, quantity);
 	req.session.cart = cart;
 	res.redirect('/');
 });
@@ -49,12 +55,13 @@ router.get('/cart', function (req, res, next)
 	if (!req.session.cart)
 	{
 		return res.render('cart', {
+			title: 'Cart',
 			products: null
 		});
 	}
 	var cart = new Cart(req.session.cart);
 	res.render('cart', {
-		title: 'NodeJS Shopping Cart',
+		title: 'Cart',
 		products: cart.getItems(),
 		totalPrice: cart.totalPrice
 	});

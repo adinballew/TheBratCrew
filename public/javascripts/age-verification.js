@@ -3,15 +3,16 @@
  * Simple Age Verification (https://github.com/Herudea/age-verification))
  */
 
-var modal_content,
-modal_screen;
+var modal_content;
+var modal_screen;
 // Start Working ASAP.
 $(document).ready(function() {
 	av_legality_check();
 });
 
 
-av_legality_check = function() {
+var av_legality_check = function ()
+{
 	if ($.cookie('is_legal') === "yes") {
 		// legal!
 		// Do nothing?
@@ -23,7 +24,8 @@ av_legality_check = function() {
 	}
 };
 
-av_showmodal = function() {
+var av_showmodal = function ()
+{
 	modal_screen = $('<div id="modal_screen"></div>');
 	modal_content = $('<div id="modal_content" style="display:none"></div>');
 	var modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
@@ -58,7 +60,8 @@ av_showmodal = function() {
 	modal_content.find('a.av_btn').on('click', av_setCookie);
 };
 
-av_setCookie = function(e) {
+var av_setCookie = function (e)
+{
 	e.preventDefault();
 
 	var is_legal = $(e.currentTarget).attr('rel');
@@ -76,18 +79,21 @@ av_setCookie = function(e) {
 	}
 };
 
-av_closeModal = function() {
+var av_closeModal = function ()
+{
 	modal_content.fadeOut();
 	modal_screen.fadeOut();
 };
 
-av_showRegret = function() {
+var av_showRegret = function ()
+{
 	modal_screen.addClass('nope');
 	modal_content.find('#modal_content_wrapper').hide();
 	modal_content.find('#modal_regret_wrapper').show();
 };
 
-av_positionPrompt = function() {
+var av_positionPrompt = function ()
+{
 	// language=JQuery-CSS
 	var top = ($(window).outerHeight() - $('#modal_content').outerHeight()) / 2;
 	// language=JQuery-CSS

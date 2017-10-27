@@ -34,14 +34,7 @@ nav li {
 }
 
 nav li:hover {
-    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
-    background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
-    background: -ms-linear-gradient(right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(159, 159, 159, .1) 50%, rgba(255, 255, 255, 0) 100%);
-    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
-    -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(159, 159, 159, 0.8);
+    text-decoration: underline;
 }
 
 nav li:first-child {

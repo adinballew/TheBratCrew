@@ -60,7 +60,7 @@
                     <h2>Top Flavors</h2>
                 </div>
                 <div id="flavors" class="d-flex justify-content-around">
-                    {{# each products }}
+                    {{# each products}}
                         {{# if this.top4}}
                             <div class="flavor-box">
                                 <div class="flavor-img">
@@ -70,8 +70,8 @@
                                     {{this.title}}
                                 </div>
                                 <div class="flavor-button">
-                                    <a data-toggle="modal" data-id="{{id}}" data-name="{{name}}"
-                                       data-imagepath="{{imagepath}}" href="#addFlavor"
+                                    <a data-toggle="modal" data-id="{{this.id}}" data-name="{{this.name}}"
+                                       data-imagepath="{{this.imagepath}}" href="#addFlavor"
                                        class="open-AddFlavor btn btn-primary my-2 my-sm-0">
                                         Options
                                     </a>

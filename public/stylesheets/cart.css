@@ -1,0 +1,11 @@
+.list-group-item {
+    background-color: #111111;
+}
+
+.list-group-item .list-item span {
+    vertical-align: -14px;
+}
+
+.list-group-item .list-item a {
+    vertical-align: -14px;
+}
