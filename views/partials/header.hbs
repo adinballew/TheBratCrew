@@ -34,7 +34,7 @@
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
                     {{# if session.cart.totalItems}}
                         <span>({{session.cart.totalItems}})</span>
-                        <span>Total: ${{session.cart.totalPrice}}</span>
+                        <span>Total: {{formatNumber session.cart.totalPrice style="currency" currency="USD"}}</span>
                     {{else}}
                         <span>(0)</span>
                         <span>Total: $0.00</span>

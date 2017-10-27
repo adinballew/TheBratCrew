@@ -31,11 +31,6 @@ router.get('/about', function (req, res, next)
 	res.render('about', {});
 });
 
-router.post('/test/:id', function (req, res, next)
-{
-	res.send("Id: " + req.params.id + " Quantity: " + req.body.qty);
-});
-
 router.post('/add/:id', function (req, res, next)
 {
 	var productId = req.params.id;

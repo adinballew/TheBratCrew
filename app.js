@@ -6,8 +6,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var hbs = require('express-hbs');
-var session = require('express-session');
+var hbs = require('express-hbs');  // https://github.com/barc/express-hbs
+var intl = require('handlebars-intl');  // https://formatjs.io/handlebars/
+var session = require('express-session');  // https://www.npmjs.com/package/express-sessions
 
 var index = require('./routes/index');
 
@@ -21,6 +22,8 @@ app.engine('hbs', hbs.express4({
 	partialsDir: __dirname + '/views/partials',
 	layoutsDir: __dirname + '/views/layouts'
 }));
+
+intl.registerWith(hbs);
 
 app.set('views', path.join(__dirname, 'views'));
 

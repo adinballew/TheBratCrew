@@ -13,7 +13,7 @@
                             <span>Qty: {{this.quantity}}</span>
                         </div>
                         <div class="col-xs-3">
-                            <span>${{this.price}}</span>
+                            <span>{{formatNumber this.price style="currency" currency="USD"}}</span>
                         </div>
                         <div class="col-xs-2">
                             <a href="/remove/{{this.item.id}}">
@@ -26,7 +26,7 @@
         </ul>
     </div>
     <div class="text-right">
-        <strong>Total: ${{totalPrice}}</strong>
+        <strong>Total: {{formatNumber totalPrice style="currency" currency="USD"}}</strong>
     </div>
     <hr>
     <div class="text-right">
