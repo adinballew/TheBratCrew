@@ -12,13 +12,14 @@
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "express-hbs": "^1.0.4",
-	"express-session": "^1.15.6",
-	"handlebars-intl": "^1.1.2",
+    "express-session": "^1.15.6",
+    "handlebars-intl": "^1.1.2",
     "morgan": "~1.9.0",
     "pg-promise": "^6.10.3",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "underscore": "latest"
   },
   "devDependencies": {
-	"nodemon": "^1.11.0"
+    "nodemon": "^1.11.0"
   }
 }

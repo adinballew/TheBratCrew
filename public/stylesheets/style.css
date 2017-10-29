@@ -8,7 +8,7 @@ body {
     position: relative;
     overflow-x: hidden;
     color: white;
-    font-family: "Times New Roman", monospace;
+    font-family: "Times New Roman", monospace; /* TODO: Use google fonts https://fonts.google.com/ */
     font-size: 20px;
 
 }

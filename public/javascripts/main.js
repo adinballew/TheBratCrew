@@ -36,5 +36,15 @@ $(document).on("click", ".open-AddFlavor", function ()
 	$(".modal-body #flavorImage").attr('src', imagepath).show();
 });
 
+// Cart Quantity Change
+$(document).on("change", ".edit-quantity", function () // Value Change quantity update
+{
+	var id = $(this).data('id');
+	var newQty = $(this).val();
+	var oldQty = $(this).data('qty');
+	$.post("/cart/" + id, {newQty: newQty, oldQty: oldQty});
+	location.reload();
+});
+
 // Dropdown toggle
 $('.dropdown-toggle').dropdown();

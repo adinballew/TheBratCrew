@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 var hbs = require('express-hbs');  // https://github.com/barc/express-hbs
 var intl = require('handlebars-intl');  // https://formatjs.io/handlebars/
-var session = require('express-session');  // https://www.npmjs.com/package/express-sessions
+var session = require('express-session');  // https://github.com/expressjs/session
 
 var index = require('./routes/index');
 
