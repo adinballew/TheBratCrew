@@ -11,7 +11,8 @@ function sql(file)
 module.exports = {
 	queries: {
 		search: sql('queries/search.sql'),
-		searchAll: sql('queries/searchAll.sql'),
-		top4: sql('queries/top4.sql')
+		searchProducts: sql('queries/searchProducts.sql'),
+		top4: sql('queries/top4.sql'),
+		searchInventory: sql('queries/searchInventory.sql')
 	}
 };

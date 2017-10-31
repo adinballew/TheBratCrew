@@ -3,19 +3,63 @@ var express = require('express');
 var router = express.Router();
 var _ = require('underscore');
 
-var fs = require('fs');
+const db = require('../db.js');
+const sql = require('../sql/sql.js').queries;
 
 var Cart = require('../models/cart');
-var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));  // Gets JSON file to array
+
+var top4;
+var products;
+var inventory;
+
+db.any(sql.searchProducts)
+	.then(function (result)
+	{
+		products = result;
+	})
+	.catch(function (err)
+	{
+		console.log(err);
+	});
+
+db.any(sql.searchInventory)
+	.then(function (result)
+	{
+		inventory = result;
+	})
+	.catch(function (err)
+	{
+		console.log(err);
+	});
 
 router.get('/', function (req, res, next)
 {
-	res.render('index',
-		{
-			title: 'theBRATcrew',
-			products: products
-		}
-	);
+	if (!top4)
+	{
+		db.any(sql.top4)
+			.then(function (result)
+			{
+				top4 = result;
+				res.render('index',
+					{
+						title: 'theBRATcrew',
+						products: top4
+					});
+			})
+			.catch(function (err)
+			{
+				console.log(err);
+			});
+	}
+	else
+	{
+		res.render('index',
+			{
+				title: 'theBRATcrew',
+				products: top4
+			}
+		);
+	}
 });
 
 router.get('/flavors', function (req, res, next)
@@ -30,7 +74,7 @@ router.get('/flavors', function (req, res, next)
 router.get('/flavors/:flavor', function (req, res, next)
 {
 	var type = req.params.flavor;
-	var filtered = _.where(products, {type: type});
+	var filtered = _.where(products, {flavor_type: type});
 	res.render('flavors',
 		{
 			products: filtered
@@ -45,16 +89,16 @@ router.get('/about', function (req, res, next)
 
 router.post('/add/:id', function (req, res, next)
 {
-	var productId = req.params.id;
-	console.log(req.body.nic);
-	console.log(req.body.vol);
+	var productId = parseInt(req.params.id);
+	var nic = req.body.nic;
+	var vol = req.body.vol;
 	var quantity = parseInt(req.body.qty);
 	var cart = new Cart(req.session.cart ? req.session.cart : {});
-	var product = products.filter(function (item)
+	var product = inventory.filter(function (item)
 	{
-		return item.id == productId;
+		return item.productid == productId && item.nic == nic && item.size == vol;
 	});
-	cart.add(product[0], productId, quantity);
+	cart.add(product[0], product[0].id, quantity);
 	req.session.cart = cart;
 	res.redirect('/');
 });
@@ -76,15 +120,15 @@ router.get('/cart', function (req, res, next)
 
 router.post('/cart/:id', function (req, res, next)
 {
-	var productId = req.params.id;
+	var id = req.params.id;
 	var newQty = parseInt(req.body.newQty);
 	var oldQty = parseInt(req.body.oldQty);
 	var cart = new Cart(req.session.cart ? req.session.cart : {});
-	var product = products.filter(function (item)
+	var product = inventory.filter(function (item)
 	{
-		return item.id == productId;
+		return item.id == id;
 	});
-	cart.changeQty(product[0], productId, newQty, oldQty);
+	cart.changeQty(product[0], id, newQty, oldQty);
 	req.session.cart = cart;
 	res.redirect('/cart');
 });

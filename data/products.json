@@ -13,7 +13,7 @@
 	"title": "Bananasicle BRAT",
 	"description": "Some Description",
 	"imagepath": "/images/juice/bananasickle.png",
-	"type": "desert",
+	"type": "dessert",
 	"price": 4.99,
 	"top4": false
   },
@@ -22,7 +22,7 @@
 	"title": "Banana BRAT Pie",
 	"description": "Some Description",
 	"imagepath": "/images/juice/bananabratpie.png",
-	"type": "desert",
+	"type": "dessert",
 	"price": 4.99,
 	"top4": false
   },
@@ -103,7 +103,7 @@
 	"title": "BRAT Red Hero",
 	"description": "Some Description",
 	"imagepath": "/images/juice/bratredhero.png",
-	"type": "desert",
+	"type": "dessert",
 	"price": 4.99,
 	"top4": true
   },
@@ -121,7 +121,7 @@
 	"title": "BRAT Yellow Hero",
 	"description": "Some Description",
 	"imagepath": "/images/juice/bratyellowhero.png",
-	"type": "desert",
+	"type": "dessert",
 	"price": 4.99,
 	"top4": true
   },
@@ -130,7 +130,7 @@
 	"title": "BRAT Blue Hero",
 	"description": "Some Description",
 	"imagepath": "/images/juice/bratbluehero.png",
-	"type": "desert",
+	"type": "dessert",
 	"price": 4.99,
 	"top4": true
   },

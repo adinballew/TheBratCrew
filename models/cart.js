@@ -17,11 +17,8 @@ module.exports = function Cart(cart)
 
 		cartItem.quantity += quantity;
 		cartItem.price = cartItem.item.price * cartItem.quantity;
-		var i;
-		for (i = 0; i < quantity; i += 1)
-		{
-			this.totalItems++;
-		}
+
+		this.totalItems = this.totalItems + cartItem.quantity;
 		this.totalPrice = this.totalPrice + cartItem.price;
 	};
 

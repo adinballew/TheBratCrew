@@ -9,3 +9,12 @@
 .list-group-item .list-item a {
     vertical-align: -14px;
 }
+
+#cartImage {
+    max-width: 40%;
+    height: auto;
+}
+
+#qty {
+    width: 20%;
+}

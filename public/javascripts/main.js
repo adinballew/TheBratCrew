@@ -42,7 +42,11 @@ $(document).on("change", ".edit-quantity", function () // Value Change quantity 
 	var id = $(this).data('id');
 	var newQty = $(this).val();
 	var oldQty = $(this).data('qty');
-	$.post("/cart/" + id, {newQty: newQty, oldQty: oldQty});
+	$.post("/cart/" + id,
+		{
+			newQty: newQty,
+			oldQty: oldQty
+		});
 	location.reload();
 });
 

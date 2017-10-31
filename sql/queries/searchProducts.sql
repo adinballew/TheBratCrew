@@ -1,0 +1,1 @@
+SELECT * FROM flavors order by id

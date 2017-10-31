@@ -4,40 +4,43 @@
         <ul class="list-group">
             {{# each products}}
                 <li class="list-group-item clearfix">
-                    <form id="cart-item" class="list-item">
                         <div class="list-item row d-flex justify-content-between">
-                            <div class="col-xs-5">
-                                <strong>{{this.item.title}}</strong><br/>
-                                <em>{{{this.item.description}}}</em>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="form-group">
-                                    <label for="qty">Qty:</label>
-                                    <input type="text" class="edit-quantity form-control" id="qty" name="qty"
-                                           data-id="{{this.item.id}}" data-qty="{{this.quantity}}"
-                                           value={{this.quantity}}>
-                                </div>
+                            <div class="col-md-6">
+                                <strong>{{this.item.name}}</strong>
+                                <br/>
+                                <img id="cartImage" src="{{this.item.image_path}}">
+                                <br/>
+                                <em>{{this.item.description}}</em>
                             </div>
                             <div class="col-xs-3">
                                 <span>{{formatNumber this.price style="currency" currency="USD"}}</span>
+                                <span>{{this.item.nic}}mg</span>
+                                <span>{{this.item.size}}ml</span>
+                                <form id="cart-item" class="form-inline">
+                                    <div class="form-group">
+                                        <label for="qty">Qty:</label>
+                                        <input type="text" class="edit-quantity form-control" id="qty" name="qty"
+                                               data-id="{{this.item.id}}" data-qty="{{this.quantity}}"
+                                               value={{this.quantity}}>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="col-xs-2">
+                            <div class="col-xs-1">
                                 <a href="/remove/{{this.item.id}}">
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
-                    </form>
                 </li>
             {{/each}}
         </ul>
-    </div>
-    <div class="text-right">
-        <strong>Total: {{formatNumber totalPrice style="currency" currency="USD"}}</strong>
-    </div>
-    <hr>
-    <div class="text-right">
-        <a href="#" type="button" class="btn btn-primary">Checkout</a>
+        <div class="text-right">
+            <strong>Total: {{formatNumber totalPrice style="currency" currency="USD"}}</strong>
+        </div>
+        <hr>
+        <div class="text-right">
+            <a href="#" type="button" class="btn btn-primary">Checkout</a>
+        </div>
     </div>
 {{else}}
     Your shopping cart is empty.

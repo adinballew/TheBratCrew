@@ -11,7 +11,7 @@
                         <a class="nav-link" href="/flavors/candy">candy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/flavors/desert">desert</a>
+                        <a class="nav-link" href="/flavors/dessert">dessert</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/flavors/drink">drink</a>
@@ -61,23 +61,21 @@
                 </div>
                 <div id="flavors" class="d-flex justify-content-around">
                     {{# each products}}
-                        {{# if this.top4}}
-                            <div class="flavor-box">
-                                <div class="flavor-img">
-                                    <img src={{this.imagepath}}>
-                                </div>
-                                <div class="flavor-name">
-                                    {{this.title}}
-                                </div>
-                                <div class="flavor-button">
-                                    <a data-toggle="modal" data-id="{{this.id}}" data-name="{{this.name}}"
-                                       data-imagepath="{{this.imagepath}}" href="#addFlavor"
-                                       class="open-AddFlavor btn btn-primary my-2 my-sm-0">
-                                        Options
-                                    </a>
-                                </div>
+                        <div class="flavor-box">
+                            <div class="flavor-img">
+                                <img src={{this.image_path}}>
                             </div>
-                        {{/if}}
+                            <div class="flavor-name">
+                                {{this.name}}
+                            </div>
+                            <div class="flavor-button">
+                                <a data-toggle="modal" data-id="{{this.id}}" data-name="{{this.name}}"
+                                   data-imagepath="{{this.image_path}}" href="#addFlavor"
+                                   class="open-AddFlavor btn btn-primary my-2 my-sm-0">
+                                    Options
+                                </a>
+                            </div>
+                        </div>
                     {{/each}}
                 </div>
             </div>
