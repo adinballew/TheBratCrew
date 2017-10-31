@@ -44,12 +44,20 @@ $(document).on("change", ".edit-quantity", function () // Value Change quantity 
 	var oldQty = $(this).data('qty');
 	if ($.isNumeric(newQty))
 	{
-		$.post("/cart/" + id,
-			{
-				newQty: newQty,
-				oldQty: oldQty
-			});
-		location.reload();
+		if (newQty === '0')
+		{
+			$.get("/remove/" + id);
+			location.reload();
+		}
+		else
+		{
+			$.post("/cart/" + id,
+				{
+					newQty: newQty,
+					oldQty: oldQty
+				});
+			location.reload();
+		}
 	}
 });
 

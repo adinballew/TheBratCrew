@@ -4,33 +4,40 @@
         <ul class="list-group">
             {{# each products}}
                 <li class="list-group-item clearfix">
-                        <div class="list-item row d-flex justify-content-between">
-                            <div class="col-md-6">
+                    <div class="list-item row d-flex justify-content-between">
+                        <div class="col-xs-5">
+                            <div class="product-data">
                                 <strong>{{this.item.name}}</strong>
                                 <br/>
                                 <img id="cartImage" src="{{this.item.image_path}}">
                                 <br/>
                                 <em>{{this.item.description}}</em>
                             </div>
-                            <div class="col-xs-3">
-                                <span>{{formatNumber this.price style="currency" currency="USD"}}</span>
-                                <span>{{this.item.nic}}mg</span>
-                                <span>{{this.item.size}}ml</span>
-                                <form id="cart-item" class="form-inline">
-                                    <div class="form-group">
-                                        <label for="qty">Qty:</label>
-                                        <input type="text" class="edit-quantity form-control" id="qty" name="qty"
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="inventory-data">
+                                <span>Subtotal: {{formatNumber this.price style="currency" currency="USD"}}</span>
+                                <br>
+                                <span>Nic: {{this.item.nic}}mg</span>
+                                <br>
+                                <span>Size: {{this.item.size}}ml</span>
+                                <form id="cart-item">
+                                    <div class="form-row d-flex justify-content-center">
+                                        <label for="qty" class="col-xs-2 col-form-label">Qty:&nbsp</label>
+                                        <input type="text" class="edit-quantity col-xs-10 form-control" id="qty"
+                                               name="qty"
                                                data-id="{{this.item.id}}" data-qty="{{this.quantity}}"
                                                value={{this.quantity}}>
                                     </div>
                                 </form>
                             </div>
-                            <div class="col-xs-1">
-                                <a href="/remove/{{this.item.id}}">
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </a>
-                            </div>
                         </div>
+                        <div class="col-xs-1">
+                            <a href="/remove/{{this.item.id}}">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             {{/each}}
         </ul>

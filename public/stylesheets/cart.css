@@ -18,3 +18,17 @@
 #qty {
     width: 20%;
 }
+
+.product-data {
+    display: inline-block;
+    text-align: center;
+}
+
+.inventory-data {
+    display: inline-block;
+    text-align: center;
+}
+
+#cart-item {
+    margin-top: 10px;
+}
