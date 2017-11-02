@@ -1,5 +1,31 @@
+@media screen and (min-width: 1200px) {
+    .cart-button {
+        margin-top: 57% !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .cart-button {
+        margin-top: 72% !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .cart-button {
+        margin-top: 110% !important;
+    }
+
+    #rightHeader .container {
+        min-width: 140px !important;
+    }
+}
+
 #rightHeader {
     text-align: right;
+}
+
+#rightHeader .container {
+    min-width: 200px;
 }
 
 /*#rightHeader .headerContent {*/
@@ -9,7 +35,8 @@
 /*}*/
 
 #headerLogo {
-    max-width: 60%;
+    min-width: 135px;
+    max-width: 135px;
     height: auto;
 }
 

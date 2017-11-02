@@ -3,7 +3,8 @@ SELECT
   flavors.id as productId,
   name,
   CASE WHEN description IS NULL
-    THEN 'Some Description' END AS description,
+    THEN 'Some Description'
+  Else description END AS description,
   image_path,
   flavor_type,
   inventory.size,

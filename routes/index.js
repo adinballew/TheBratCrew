@@ -1,5 +1,6 @@
 "use strict";
 var express = require('express');
+
 var router = express.Router();
 var _ = require('underscore');
 
@@ -8,29 +9,35 @@ const sql = require('../sql/sql.js').queries;
 
 var Cart = require('../models/cart');
 
+function getProducts()
+{
+	db.any(sql.searchProducts)
+		.then(function (result)
+		{
+			products = result;
+		})
+		.catch(function (err)
+		{
+			console.log(err);
+		});
+}
+
+function getInventory()
+{
+	db.any(sql.searchInventory)
+		.then(function (result)
+		{
+			inventory = result;
+		})
+		.catch(function (err)
+		{
+			console.log(err);
+		});
+}
+
 var top4;
-var products;
-var inventory;
-
-db.any(sql.searchProducts)
-	.then(function (result)
-	{
-		products = result;
-	})
-	.catch(function (err)
-	{
-		console.log(err);
-	});
-
-db.any(sql.searchInventory)
-	.then(function (result)
-	{
-		inventory = result;
-	})
-	.catch(function (err)
-	{
-		console.log(err);
-	});
+var products = getProducts();
+var inventory = getInventory();
 
 router.get('/', function (req, res, next)
 {
