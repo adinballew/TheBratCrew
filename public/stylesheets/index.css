@@ -68,9 +68,13 @@
     margin: auto;
 }
 
-#flavors {
+#top-flavors {
     text-align: center;
     flex-wrap: wrap;
+}
+
+#flavors {
+    text-align: center;
 }
 
 .banner {
@@ -82,7 +86,7 @@
 }
 
 .flavor-box {
-    /*display: inline-block;*/
+    display: inline-block;
 }
 
 .flavor-box:hover {
