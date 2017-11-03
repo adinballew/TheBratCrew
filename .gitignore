@@ -1,7 +1,7 @@
 .idea
 node_modules
-notes.txt
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+notes.txt
+
+# Elastic Beanstalk Files
+.elasticbeanstalk
+
