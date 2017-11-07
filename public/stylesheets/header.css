@@ -20,6 +20,22 @@
     }
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .cart-button {
+        margin-top: 44% !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .cart-button {
+        margin-top: 0% !important;
+    }
+
+    .d-flex {
+        display: table !important;
+    }
+}
+
 #rightHeader {
     text-align: right;
 }

@@ -2,7 +2,7 @@
     height: 100%;
     /* TODO: Change navbar background */
     background: url('../images/bgs/20.jpg') no-repeat center center;
-    background-size: 100%;
+    background-size: 200%;
 }
 
 .navbar a {
