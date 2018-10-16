@@ -45,10 +45,14 @@
             <strong>Total: {{formatNumber totalPrice style="currency" currency="USD"}}</strong>
         </div>
         <hr>
-        <div class="text-right">
-            <a href="#" type="button" class="btn btn-primary">Checkout</a>
+        <div class="checkout-button">
+            <a data-toggle="modal" href="#checkout" class="open-Checkout btn btn-primary"
+               data-products="{{products}}" data-totalPrice="{{totalPrice}}">
+                Checkout
+            </a>
         </div>
     </div>
 {{else}}
     Your shopping cart is empty.
 {{/if}}
+{{>checkout-modal}}

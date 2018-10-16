@@ -25,8 +25,21 @@ $(document).ready(function ()
 
 });
 
-// Modal On-click
+// Options-Modal On-click
 $(document).on("click", ".open-AddFlavor", function ()
+{
+	var name = $(this).data('name');
+	var flavorId = $(this).data('id');
+	var imagepath = $(this).data('imagepath');
+	var description = $(this).data('description');
+	$(".modal-body #flavorName").text(name);
+	$(".modal-body #addToCart").attr('action', /add/ + flavorId);
+	$(".modal-body #flavorImage").attr('src', imagepath).show();
+	$(".modal-body #flavorDescription").text(description);
+});
+
+// Checkout-Modal On-click
+$(document).on("click", ".open-Checkout", function ()
 {
 	var name = $(this).data('name');
 	var flavorId = $(this).data('id');

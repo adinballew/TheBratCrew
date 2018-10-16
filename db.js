@@ -10,25 +10,25 @@ var config = {
 };
 
 var options = {
-	promiseLib: promise,
-	query: function query(e)
-	{
-		console.log('QUERY:', e.query);
-	},
-	connect: function connect(client, isFresh)
-	{
-		var cp = client.connectionParameters;
-		console.log('Connected to database:', cp.database);
-		if (isFresh)
-		{
-			console.log('Connection is Fresh');
-		}
-	},
-	disconnect: function disconnect(client)
-	{
-		var cp = client.connectionParameters;
-		console.log('Disconnecting from database:', cp.database);
-	}
+	promiseLib: promise
+	// query: function query(e)
+	// {
+	// 	console.log('QUERY:', e.query);
+	// },
+	// connect: function connect(client, isFresh)
+	// {
+	// 	var cp = client.connectionParameters;
+	// 	console.log('Connected to database:', cp.database);
+	// 	if (isFresh)
+	// 	{
+	// 		console.log('Connection is Fresh');
+	// 	}
+	// },
+	// disconnect: function disconnect(client)
+	// {
+	// 	var cp = client.connectionParameters;
+	// 	console.log('Disconnecting from database:', cp.database);
+	// }
 };
 
 var pgp = require('pg-promise')(options);

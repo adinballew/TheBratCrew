@@ -1,7 +1,13 @@
 .navbar {
     height: 100%;
     /* TODO: Change navbar background */
-    background: url('../images/bgs/20.jpg') no-repeat center center;
+    background-color: #ed1c24;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#000000));
+    background: -webkit-linear-gradient(top, #ed1c24, #000000);
+    background: -moz-linear-gradient(top, #ed1c24, #000000);
+    background: -ms-linear-gradient(top, #ed1c24, #000000);
+    background: -o-linear-gradient(top, #ed1c24, #000000);
+    background: linear-gradient(top, #ed1c24, #000000);
     background-size: 200%;
 }
 
@@ -63,7 +69,7 @@ nav .btn-primary, .modal .btn-primary {
 nav .btn-primary:hover, nav .btn-primary:focus, nav .btn-primary:active, nav .btn-primary.active,
 .modal .btn-primary:hover, .modal .btn-primary:focus, .modal .btn-primary:active, .modal .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    color: #ff0202;
+    color: #ed1c24;
     background: #111;
 }
 
